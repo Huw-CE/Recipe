@@ -304,24 +304,7 @@ textarea.method-textarea { min-height: 180px; }
 }
 .success-back:hover { gap: 10px; }
 
-/* ── SETUP NOTICE ───────────────────────────────────── */
-.setup-notice {
-  background: rgba(212,168,71,0.08);
-  border: 1px solid rgba(212,168,71,0.3);
-  border-radius: 10px;
-  padding: 14px 18px;
-  margin-bottom: 28px;
-  font-size: 12px;
-  color: var(--brown);
-  line-height: 1.6;
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
-}
-.setup-notice-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
-.setup-notice strong { color: var(--ink); }
-.setup-notice a { color: var(--rust); }
-.setup-notice.is-hidden { display: none; }
+/* Setup notice removed — form is active */
 
 /* ── RESPONSIVE ─────────────────────────────────────── */
 @media (max-width: 768px) {
@@ -365,19 +348,8 @@ textarea.method-textarea { min-height: 180px; }
   <div class="submit-body">
 
     <div class="submit-intro">
-      <p>Got a recipe to share? Send it through one of three ways — link to it online, upload a photo, or type it out in full. Everything arrives by email for review before being added to the collection.</p>
-    </div>
-
-    <!-- ── SETUP NOTICE (remove once Formspree is wired up) ── -->
-    <div class="setup-notice" id="setup-notice">
-      <span class="setup-notice-icon">⚙️</span>
-      <div>
-        <strong>To activate this form:</strong> create a free account at
-        <a href="https://formspree.io" target="_blank" rel="noopener">formspree.io</a>,
-        create a new form, copy your endpoint URL, and replace
-        <code>xpqybzoj</code> in the three form <code>action</code> attributes
-        in this file's HTML. That's it — submissions will arrive in your inbox.
-      </div>
+      <h2 style="font-family:'Playfair Display',serif;font-size:28px;font-weight:400;color:var(--ink);margin-bottom:12px;">Add a <em style="font-style:italic;color:var(--rust);">recipe</em></h2>
+      <p>Send it through one of three ways — link to it online, upload a photo, or type it out in full. Everything arrives by email for review before being added to the collection.</p>
     </div>
 
     <!-- ── METHOD SELECTOR ── -->
@@ -724,14 +696,6 @@ document.querySelectorAll('form').forEach(form => {
       alert('Something went wrong — please try again or email us directly.');
     }
   });
-});
-
-// ── HIDE SETUP NOTICE if Formspree is wired ───────────
-// (Checks if the action still contains the placeholder)
-document.querySelectorAll('form').forEach(form => {
-  if (!form.action.includes('xpqybzoj')) {
-    document.getElementById('setup-notice')?.classList.add('is-hidden');
-  }
 });
 
 </script>
