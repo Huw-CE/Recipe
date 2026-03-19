@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add a Recipe — Cooking at Livingstone</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+<style>
+
+/* ── PAGE LAYOUT ────────────────────────────────────── */
+.submit-body {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 48px 40px 80px;
+}
+
+.submit-intro {
+  margin-bottom: 40px;
+}
+.submit-intro p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--muted);
+  max-width: 560px;
+}
+
+/* ── METHOD SELECTOR ────────────────────────────────── */
+.method-selector {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.method-btn {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.18s;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--brown);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.method-btn:hover {
+  border-color: var(--rust);
+  box-shadow: 0 2px 12px rgba(192,90,44,0.08);
+}
+.method-btn.is-active {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--warm-white);
+  box-shadow: 0 4px 16px rgba(26,20,16,0.15);
+}
+.method-icon { font-size: 24px; line-height: 1; }
+.method-label {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.method-desc {
+  font-size: 11px;
+  opacity: 0.6;
+  line-height: 1.4;
+}
+
+/* ── FORM PANELS ────────────────────────────────────── */
+.form-panel { display: none; }
+.form-panel.is-active { display: block; animation: fadeUp 0.22s ease; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── FORM ELEMENTS ──────────────────────────────────── */
+.form-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.form-card-header {
+  padding: 24px 28px 20px;
+  border-bottom: 1px solid var(--border);
+  background: var(--warm-white);
+}
+.form-card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.form-card-title em { font-style: italic; color: var(--rust); }
+.form-card-desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.form-body { padding: 28px; }
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+.field:last-child { margin-bottom: 0; }
+
+label {
+  display: block;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 7px;
+}
+label .required {
+  color: var(--rust);
+  margin-left: 2px;
+}
+label .optional {
+  color: var(--border);
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  font-size: 10px;
+  margin-left: 4px;
+}
+
+input[type="text"],
+input[type="url"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--cream);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--rust);
+  box-shadow: 0 0 0 3px rgba(192,90,44,0.08);
+  background: white;
+}
+input::placeholder,
+textarea::placeholder { color: var(--border); }
+
+select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239C8B7A' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+  line-height: 1.6;
+}
+textarea.method-textarea { min-height: 180px; }
+
+/* File input */
+.file-drop {
+  border: 2px dashed var(--border);
+  border-radius: 8px;
+  padding: 28px 20px;
+  text-align: center;
+  background: var(--cream);
+  cursor: pointer;
+  transition: all 0.18s;
+  position: relative;
+}
+.file-drop:hover, .file-drop.is-over {
+  border-color: var(--rust);
+  background: rgba(192,90,44,0.03);
+}
+.file-drop input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+}
+.file-drop-icon { font-size: 28px; margin-bottom: 8px; line-height: 1; }
+.file-drop-label {
+  font-size: 13px;
+  color: var(--brown);
+  font-weight: 500;
+  display: block;
+  margin-bottom: 4px;
+}
+.file-drop-hint { font-size: 11px; color: var(--muted); }
+.file-name {
+  display: none;
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--rust);
+  font-weight: 500;
+}
+
+/* Divider between field groups */
+.field-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 24px 0;
+}
+
+/* ── SUBMIT BUTTON ──────────────────────────────────── */
+.form-footer {
+  padding: 20px 28px 28px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.form-note {
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.5;
+  flex: 1;
+}
+.form-note a { color: var(--rust); text-decoration: none; }
+
+.submit-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--ink);
+  color: var(--warm-white);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+.submit-btn:hover { background: var(--rust); }
+.submit-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+/* ── SUCCESS STATE ──────────────────────────────────── */
+.success-message {
+  display: none;
+  text-align: center;
+  padding: 60px 40px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+.success-message.is-visible { display: block; animation: fadeUp 0.3s ease; }
+.success-icon { font-size: 48px; margin-bottom: 16px; }
+.success-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+.success-title em { font-style: italic; color: var(--rust); }
+.success-text { font-size: 14px; color: var(--muted); line-height: 1.7; max-width: 420px; margin: 0 auto 24px; }
+.success-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--rust);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: gap 0.15s;
+}
+.success-back:hover { gap: 10px; }
+
+/* ── SETUP NOTICE ───────────────────────────────────── */
+.setup-notice {
+  background: rgba(212,168,71,0.08);
+  border: 1px solid rgba(212,168,71,0.3);
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 28px;
+  font-size: 12px;
+  color: var(--brown);
+  line-height: 1.6;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.setup-notice-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+.setup-notice strong { color: var(--ink); }
+.setup-notice a { color: var(--rust); }
+.setup-notice.is-hidden { display: none; }
+
+/* ── RESPONSIVE ─────────────────────────────────────── */
+@media (max-width: 768px) {
+  .submit-body { padding: 28px 20px 64px; }
+  .method-selector { grid-template-columns: 1fr; gap: 8px; }
+  .method-btn { flex-direction: row; text-align: left; padding: 14px 16px; }
+  .method-icon { font-size: 20px; }
+  .field-row { grid-template-columns: 1fr; }
+  .form-body { padding: 20px; }
+  .form-card-header { padding: 20px; }
+  .form-footer { flex-direction: column; align-items: stretch; }
+  .submit-btn { justify-content: center; }
+}
+
+</style>
+</head>
+<body>
+
+<nav class="nav" id="main-nav">
+  <a href="index.html" class="nav-brand">Cooking at <em>Livingstone</em></a>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Menu">☰</button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="browse.html" class="nav-link">Recipes</a></li>
+    <li><a href="authors.html" class="nav-link">Authors</a></li>
+    <li><a href="categories.html" class="nav-link">Categories</a></li>
+    <li><a href="ingredient-index.html" class="nav-link">Ingredient Index</a></li>
+  </ul>
+</nav>
+
+<main>
+  <section class="subpage-hero">
+    <div class="hero-eyebrow">Grow the collection</div>
+    <h1>Add a <em>Recipe</em></h1>
+    <div class="subpage-meta">
+      <span>Share something delicious</span>
+    </div>
+    <div class="hero-rule"></div>
+  </section>
+
+  <div class="submit-body">
+
+    <div class="submit-intro">
+      <p>Got a recipe to share? Send it through one of three ways — link to it online, upload a photo, or type it out in full. Everything arrives by email for review before being added to the collection.</p>
+    </div>
+
+    <!-- ── SETUP NOTICE (remove once Formspree is wired up) ── -->
+    <div class="setup-notice" id="setup-notice">
+      <span class="setup-notice-icon">⚙️</span>
+      <div>
+        <strong>To activate this form:</strong> create a free account at
+        <a href="https://formspree.io" target="_blank" rel="noopener">formspree.io</a>,
+        create a new form, copy your endpoint URL, and replace
+        <code>xpqybzoj</code> in the three form <code>action</code> attributes
+        in this file's HTML. That's it — submissions will arrive in your inbox.
+      </div>
+    </div>
+
+    <!-- ── METHOD SELECTOR ── -->
+    <div class="method-selector">
+      <button class="method-btn is-active" data-method="url">
+        <span class="method-icon">🔗</span>
+        <div>
+          <div class="method-label">Link a recipe</div>
+          <div class="method-desc">Share a URL from another site</div>
+        </div>
+      </button>
+      <button class="method-btn" data-method="photo">
+        <span class="method-icon">📷</span>
+        <div>
+          <div class="method-label">Upload a photo</div>
+          <div class="method-desc">Send a photo of the recipe</div>
+        </div>
+      </button>
+      <button class="method-btn" data-method="manual">
+        <span class="method-icon">✍️</span>
+        <div>
+          <div class="method-label">Type it out</div>
+          <div class="method-desc">Enter all the details manually</div>
+        </div>
+      </button>
+    </div>
+
+    <!-- ══════════ PANEL 1: URL ══════════ -->
+    <div class="form-panel is-active" id="panel-url">
+      <form action="https://formspree.io/f/xpqybzoj" method="POST" id="form-url">
+        <input type="hidden" name="_subject" value="New recipe submission — Link">
+        <input type="hidden" name="submission_type" value="url">
+
+        <div class="form-card">
+          <div class="form-card-header">
+            <div class="form-card-title">Link a <em>Recipe</em></div>
+            <div class="form-card-desc">Paste the URL and add any notes — we'll review and add it to the collection.</div>
+          </div>
+          <div class="form-body">
+            <div class="field">
+              <label for="url-recipe-url">Recipe URL <span class="required">*</span></label>
+              <input type="url" id="url-recipe-url" name="recipe_url"
+                     placeholder="https://..." required>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="url-title">Recipe title <span class="optional">(optional)</span></label>
+                <input type="text" id="url-title" name="title" placeholder="e.g. Chicken Parmigiana">
+              </div>
+              <div class="field">
+                <label for="url-category">Category <span class="optional">(optional)</span></label>
+                <select id="url-category" name="category">
+                  <option value="">— Select a category —</option>
+                  <option>Baking</option>
+                  <option>Basics</option>
+                  <option>Beef</option>
+                  <option>Breakfast</option>
+                  <option>Dessert</option>
+                  <option>Dumplings</option>
+                  <option>Game</option>
+                  <option>Lamb</option>
+                  <option>Pasta</option>
+                  <option>Pickles &amp; Chutneys</option>
+                  <option>Pork</option>
+                  <option>Poultry</option>
+                  <option>Risotto</option>
+                  <option>Salads</option>
+                  <option>Seafood</option>
+                  <option>Snacks</option>
+                  <option>Soup &amp; Noodles</option>
+                  <option>Vegetarian</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="url-notes">Notes <span class="optional">(optional)</span></label>
+              <textarea id="url-notes" name="notes" rows="3"
+                        placeholder="Why do you love this recipe? Any variations or tips?"></textarea>
+            </div>
+            <div class="field">
+              <label for="url-from">Your name <span class="optional">(optional)</span></label>
+              <input type="text" id="url-from" name="submitted_by" placeholder="e.g. Grandma Jean">
+            </div>
+          </div>
+          <div class="form-footer">
+            <div class="form-note">
+              Submissions are reviewed before being added to the collection.
+            </div>
+            <button type="submit" class="submit-btn">Send recipe →</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- ══════════ PANEL 2: PHOTO ══════════ -->
+    <div class="form-panel" id="panel-photo">
+      <form action="https://formspree.io/f/xpqybzoj" method="POST"
+            enctype="multipart/form-data" id="form-photo">
+        <input type="hidden" name="_subject" value="New recipe submission — Photo">
+        <input type="hidden" name="submission_type" value="photo">
+
+        <div class="form-card">
+          <div class="form-card-header">
+            <div class="form-card-title">Upload a <em>Photo</em></div>
+            <div class="form-card-desc">A photo of the recipe — from a book, magazine, handwritten card, or screen. We'll transcribe it from there.</div>
+          </div>
+          <div class="form-body">
+            <div class="field">
+              <label>Photo <span class="required">*</span></label>
+              <div class="file-drop" id="photo-drop">
+                <input type="file" name="photo" accept="image/*" id="photo-input" required>
+                <div class="file-drop-icon">📷</div>
+                <span class="file-drop-label">Tap to choose a photo</span>
+                <span class="file-drop-hint">JPG, PNG or HEIC · up to 20MB</span>
+                <div class="file-name" id="photo-file-name"></div>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="photo-title">Recipe title <span class="optional">(optional)</span></label>
+                <input type="text" id="photo-title" name="title" placeholder="If you know it">
+              </div>
+              <div class="field">
+                <label for="photo-source">Source <span class="optional">(optional)</span></label>
+                <input type="text" id="photo-source" name="source"
+                       placeholder="e.g. Nana's recipe card">
+              </div>
+            </div>
+            <div class="field">
+              <label for="photo-notes">Notes <span class="optional">(optional)</span></label>
+              <textarea id="photo-notes" name="notes" rows="3"
+                        placeholder="Anything else we should know?"></textarea>
+            </div>
+            <div class="field">
+              <label for="photo-from">Your name <span class="optional">(optional)</span></label>
+              <input type="text" id="photo-from" name="submitted_by" placeholder="e.g. Grandma Jean">
+            </div>
+          </div>
+          <div class="form-footer">
+            <div class="form-note">
+              Submissions are reviewed before being added to the collection.
+            </div>
+            <button type="submit" class="submit-btn">Send recipe →</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- ══════════ PANEL 3: MANUAL ══════════ -->
+    <div class="form-panel" id="panel-manual">
+      <form action="https://formspree.io/f/xpqybzoj" method="POST" id="form-manual">
+        <input type="hidden" name="_subject" value="New recipe submission — Full details">
+        <input type="hidden" name="submission_type" value="manual">
+
+        <div class="form-card">
+          <div class="form-card-header">
+            <div class="form-card-title">Type it <em>Out</em></div>
+            <div class="form-card-desc">Enter all the details and it'll arrive ready to add to the collection.</div>
+          </div>
+          <div class="form-body">
+
+            <!-- Title + Category -->
+            <div class="field-row">
+              <div class="field">
+                <label for="m-title">Recipe title <span class="required">*</span></label>
+                <input type="text" id="m-title" name="title"
+                       placeholder="e.g. Roast Tikka Chicken" required>
+              </div>
+              <div class="field">
+                <label for="m-category">Category <span class="required">*</span></label>
+                <select id="m-category" name="category" required>
+                  <option value="">— Select —</option>
+                  <option>Baking</option>
+                  <option>Basics</option>
+                  <option>Beef</option>
+                  <option>Breakfast</option>
+                  <option>Dessert</option>
+                  <option>Dumplings</option>
+                  <option>Game</option>
+                  <option>Lamb</option>
+                  <option>Pasta</option>
+                  <option>Pickles &amp; Chutneys</option>
+                  <option>Pork</option>
+                  <option>Poultry</option>
+                  <option>Risotto</option>
+                  <option>Salads</option>
+                  <option>Seafood</option>
+                  <option>Snacks</option>
+                  <option>Soup &amp; Noodles</option>
+                  <option>Vegetarian</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Author + Book -->
+            <div class="field-row">
+              <div class="field">
+                <label for="m-author">Author / Cook <span class="optional">(optional)</span></label>
+                <input type="text" id="m-author" name="author"
+                       placeholder="e.g. Jamie Oliver">
+              </div>
+              <div class="field">
+                <label for="m-book">Book / Source <span class="optional">(optional)</span></label>
+                <input type="text" id="m-book" name="source"
+                       placeholder="e.g. 5 Ingredients">
+              </div>
+            </div>
+
+            <!-- Serves + Time -->
+            <div class="field-row">
+              <div class="field">
+                <label for="m-serves">Serves <span class="optional">(optional)</span></label>
+                <input type="text" id="m-serves" name="serves"
+                       placeholder="e.g. 4">
+              </div>
+              <div class="field">
+                <label for="m-time">Time <span class="optional">(optional)</span></label>
+                <input type="text" id="m-time" name="time"
+                       placeholder="e.g. 35 mins">
+              </div>
+            </div>
+
+            <div class="field-divider"></div>
+
+            <!-- Ingredients -->
+            <div class="field">
+              <label for="m-ingredients">
+                Ingredients <span class="required">*</span>
+              </label>
+              <textarea id="m-ingredients" name="ingredients"
+                        placeholder="One ingredient per line, e.g.&#10;2 chicken thighs&#10;1 tbsp olive oil&#10;Salt and pepper"
+                        rows="6" required></textarea>
+            </div>
+
+            <!-- Method -->
+            <div class="field">
+              <label for="m-method">Method <span class="required">*</span></label>
+              <textarea id="m-method" name="method" class="method-textarea"
+                        placeholder="Describe the steps…" required></textarea>
+            </div>
+
+            <div class="field-divider"></div>
+
+            <!-- Submitted by + Notes -->
+            <div class="field-row">
+              <div class="field">
+                <label for="m-from">Your name <span class="optional">(optional)</span></label>
+                <input type="text" id="m-from" name="submitted_by"
+                       placeholder="e.g. Grandma Jean">
+              </div>
+              <div class="field">
+                <label for="m-notes">Notes <span class="optional">(optional)</span></label>
+                <input type="text" id="m-notes" name="notes"
+                       placeholder="Tips, variations, stories…">
+              </div>
+            </div>
+
+          </div>
+          <div class="form-footer">
+            <div class="form-note">
+              Submissions are reviewed before being added to the collection.
+            </div>
+            <button type="submit" class="submit-btn">Send recipe →</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- ── SUCCESS MESSAGE ── -->
+    <div class="success-message" id="success-message">
+      <div class="success-icon">🎉</div>
+      <div class="success-title">Recipe <em>received!</em></div>
+      <p class="success-text">Thanks for sharing. The recipe will be reviewed and added to the collection shortly.</p>
+      <a href="index.html" class="success-back">← Back to the collection</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-eyebrow">Kitchen Notes</div>
+      <div class="footer-title">Cook well, share often, <em>eat together</em></div>
+    </div>
+    <div class="footer-note"><a href="submit.html" class="footer-submit-btn">Add a recipe →</a></div>
+  </div>
+</footer>
+
+<script>
+
+// ── METHOD SWITCHER ───────────────────────────────────
+document.querySelectorAll('[data-method]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('[data-method]').forEach(b => b.classList.remove('is-active'));
+    btn.classList.add('is-active');
+    const method = btn.dataset.method;
+    document.querySelectorAll('.form-panel').forEach(p => p.classList.remove('is-active'));
+    document.getElementById('panel-' + method).classList.add('is-active');
+    document.getElementById('success-message').classList.remove('is-visible');
+  });
+});
+
+// ── FILE INPUT LABEL ──────────────────────────────────
+const photoInput = document.getElementById('photo-input');
+if (photoInput) {
+  photoInput.addEventListener('change', () => {
+    const nameEl = document.getElementById('photo-file-name');
+    if (photoInput.files.length) {
+      nameEl.textContent = photoInput.files[0].name;
+      nameEl.style.display = 'block';
+    }
+  });
+}
+
+// ── FORM SUBMISSIONS (AJAX for smooth UX) ─────────────
+document.querySelectorAll('form').forEach(form => {
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const btn = form.querySelector('.submit-btn');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+
+    try {
+      const data = new FormData(form);
+      const res  = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        // Hide all form panels and show success
+        document.querySelectorAll('.form-panel').forEach(p => p.classList.remove('is-active'));
+        document.querySelectorAll('[data-method]').forEach(b => b.classList.remove('is-active'));
+        document.getElementById('success-message').classList.add('is-visible');
+        document.getElementById('success-message').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        throw new Error('Server error');
+      }
+    } catch {
+      btn.disabled = false;
+      btn.textContent = 'Send recipe →';
+      alert('Something went wrong — please try again or email us directly.');
+    }
+  });
+});
+
+// ── HIDE SETUP NOTICE if Formspree is wired ───────────
+// (Checks if the action still contains the placeholder)
+document.querySelectorAll('form').forEach(form => {
+  if (!form.action.includes('xpqybzoj')) {
+    document.getElementById('setup-notice')?.classList.add('is-hidden');
+  }
+});
+
+</script>
+<script>
+document.getElementById('nav-toggle').addEventListener('click', function() {
+  document.getElementById('nav-links').classList.toggle('is-open');
+});
+</script>
+</body>
+</html>
