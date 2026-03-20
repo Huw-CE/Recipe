@@ -74,6 +74,10 @@
           <!-- Sign Up panel -->
           <div class="auth-panel" id="panel-signup">
             <div class="auth-field">
+              <label for="su-name">Your name <span class="auth-field-optional">optional</span></label>
+              <input type="text" id="su-name" placeholder="e.g. Huw Cushing" autocomplete="name">
+            </div>
+            <div class="auth-field">
               <label for="su-email">Email</label>
               <input type="email" id="su-email" placeholder="you@example.com" autocomplete="email">
             </div>
@@ -90,6 +94,7 @@
         <!-- ── SIGNED-IN VIEW ── -->
         <div id="auth-in" style="display:none;">
           <div class="auth-avatar-lg" id="auth-avatar-lg"></div>
+          <div class="auth-user-name" id="auth-user-name" style="display:none;"></div>
           <div class="auth-user-email" id="auth-user-email"></div>
           <div class="auth-fav-summary">
             <span class="auth-fav-heart">❤️</span>
@@ -141,13 +146,14 @@
 
     // Sign Up submit
     document.getElementById('su-submit').addEventListener('click', async () => {
+      const name     = document.getElementById('su-name').value.trim();
       const email    = document.getElementById('su-email').value.trim();
       const password = document.getElementById('su-password').value;
       const msgEl    = document.getElementById('su-msg');
       if (!email || !password) { showMsg(msgEl, 'Please enter your email and password.', 'error'); return; }
       if (password.length < 6) { showMsg(msgEl, 'Password must be at least 6 characters.', 'error'); return; }
       setBtnLoading('su-submit', true, 'Create Account');
-      const { error } = await sbSignUp(email, password);
+      const { error } = await sbSignUp(email, password, name);
       setBtnLoading('su-submit', false, 'Create Account');
       if (error) { showMsg(msgEl, error.message, 'error'); return; }
       showMsg(msgEl, '✓ Check your email to confirm your account.', 'success');
@@ -182,8 +188,19 @@
   }
 
   function userInitials(user) {
-    const name = user.user_metadata?.full_name || user.email || '?';
-    return name.split(/[\s@]+/).map(w => w[0]).join('').slice(0, 2).toUpperCase();
+    // Prefer full name from OAuth (e.g. Google sets this)
+    const fullName = user.user_metadata?.full_name;
+    if (fullName) {
+      return fullName.split(/\s+/).map(w => w[0]).join('').slice(0, 2).toUpperCase();
+    }
+    // Fall back to email: use only the local part (before @),
+    // then split on . _ - so "huw.cushing@gmail.com" → HC not HG
+    const local = (user.email || '??').split('@')[0];
+    const parts  = local.split(/[.\-_]+/).filter(Boolean);
+    if (parts.length >= 2) {
+      return (parts[0][0] + parts[1][0]).toUpperCase();
+    }
+    return local.slice(0, 2).toUpperCase();
   }
 
   // ── UPDATE NAV BUTTON ────────────────────────────────
@@ -209,6 +226,14 @@
     document.getElementById('auth-user-email').textContent  = user.email;
     document.getElementById('auth-avatar-lg').textContent   = userInitials(user);
     document.getElementById('auth-fav-count').textContent   = favCount;
+    const nameEl   = document.getElementById('auth-user-name');
+    const dispName = user.user_metadata?.full_name || user.user_metadata?.display_name || '';
+    if (dispName) {
+      nameEl.textContent    = dispName;
+      nameEl.style.display  = '';
+    } else {
+      nameEl.style.display  = 'none';
+    }
   }
   function setModalSignedOut() {
     document.getElementById('auth-out').style.display = '';
