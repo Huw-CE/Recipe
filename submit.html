@@ -184,7 +184,48 @@ textarea {
 }
 textarea.method-textarea { min-height: 180px; }
 
-
+/* File input */
+.file-drop {
+  border: 2px dashed var(--border);
+  border-radius: 8px;
+  padding: 28px 20px;
+  text-align: center;
+  background: var(--cream);
+  cursor: pointer;
+  transition: all 0.18s;
+  position: relative;
+}
+.file-drop:hover, .file-drop.is-over {
+  border-color: var(--rust);
+  background: rgba(192,90,44,0.03);
+}
+.file-drop input[type="file"] {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+}
+.file-drop-icon { font-size: 28px; margin-bottom: 8px; line-height: 1; }
+.file-drop-label {
+  font-size: 13px;
+  color: var(--brown);
+  font-weight: 500;
+  display: block;
+  margin-bottom: 4px;
+}
+.file-drop-hint { font-size: 11px; color: var(--muted); }
+.file-name {
+  display: none;
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--rust);
+  font-weight: 500;
+}
 
 /* Divider between field groups */
 .field-divider {
@@ -263,7 +304,24 @@ textarea.method-textarea { min-height: 180px; }
 }
 .success-back:hover { gap: 10px; }
 
-/* Setup notice removed — form is active */
+/* ── SETUP NOTICE ───────────────────────────────────── */
+.setup-notice {
+  background: rgba(212,168,71,0.08);
+  border: 1px solid rgba(212,168,71,0.3);
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 28px;
+  font-size: 12px;
+  color: var(--brown);
+  line-height: 1.6;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.setup-notice-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+.setup-notice strong { color: var(--ink); }
+.setup-notice a { color: var(--rust); }
+.setup-notice.is-hidden { display: none; }
 
 /* ── RESPONSIVE ─────────────────────────────────────── */
 @media (max-width: 768px) {
@@ -307,8 +365,19 @@ textarea.method-textarea { min-height: 180px; }
   <div class="submit-body">
 
     <div class="submit-intro">
-      <h2 style="font-family:'Playfair Display',serif;font-size:28px;font-weight:400;color:var(--ink);margin-bottom:12px;">Add a <em style="font-style:italic;color:var(--rust);">recipe</em></h2>
-      <p>Send it through one of three ways — link to it online, upload a photo, or type it out in full. Everything arrives by email for review before being added to the collection.</p>
+      <p>Got a recipe to share? Send it through one of three ways — link to it online, upload a photo, or type it out in full. Everything arrives by email for review before being added to the collection.</p>
+    </div>
+
+    <!-- ── SETUP NOTICE (remove once Formspree is wired up) ── -->
+    <div class="setup-notice" id="setup-notice">
+      <span class="setup-notice-icon">⚙️</span>
+      <div>
+        <strong>To activate this form:</strong> create a free account at
+        <a href="https://formspree.io" target="_blank" rel="noopener">formspree.io</a>,
+        create a new form, copy your endpoint URL, and replace
+        <code>xpqybzoj</code> in the three form <code>action</code> attributes
+        in this file's HTML. That's it — submissions will arrive in your inbox.
+      </div>
     </div>
 
     <!-- ── METHOD SELECTOR ── -->
@@ -405,38 +474,56 @@ textarea.method-textarea { min-height: 180px; }
 
     <!-- ══════════ PANEL 2: PHOTO ══════════ -->
     <div class="form-panel" id="panel-photo">
-      <div class="form-card">
-        <div class="form-card-header">
-          <div class="form-card-title">Upload a <em>Photo</em></div>
-          <div class="form-card-desc">Fill in what you know, then click the button — your email app will open with everything pre-filled. Just attach the photo and hit send.</div>
-        </div>
-        <div class="form-body">
-          <div class="field-row">
+      <form action="https://formspree.io/f/xpqybzoj" method="POST"
+            enctype="multipart/form-data" id="form-photo">
+        <input type="hidden" name="_subject" value="New recipe submission — Photo">
+        <input type="hidden" name="submission_type" value="photo">
+
+        <div class="form-card">
+          <div class="form-card-header">
+            <div class="form-card-title">Upload a <em>Photo</em></div>
+            <div class="form-card-desc">A photo of the recipe — from a book, magazine, handwritten card, or screen. We'll transcribe it from there.</div>
+          </div>
+          <div class="form-body">
             <div class="field">
-              <label for="photo-title">Recipe title <span class="optional">(optional)</span></label>
-              <input type="text" id="photo-title" placeholder="e.g. Nana's Lasagne">
+              <label>Photo <span class="required">*</span></label>
+              <div class="file-drop" id="photo-drop">
+                <input type="file" name="photos[]" accept="image/*" id="photo-input" multiple required>
+                <div class="file-drop-icon">📷</div>
+                <span class="file-drop-label">Tap to choose one or more photos</span>
+                <span class="file-drop-hint">JPG, PNG or HEIC · select multiple for a batch</span>
+                <div class="file-name" id="photo-file-name"></div>
+              </div>
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="photo-author">Author <span class="optional">(optional)</span></label>
+                <input type="text" id="photo-author" name="author" placeholder="e.g. Jamie Oliver">
+              </div>
+              <div class="field">
+                <label for="photo-source">Source <span class="optional">(optional)</span></label>
+                <input type="text" id="photo-source" name="source"
+                       placeholder="e.g. Nana's recipe card">
+              </div>
             </div>
             <div class="field">
-              <label for="photo-source">Source <span class="optional">(optional)</span></label>
-              <input type="text" id="photo-source" placeholder="e.g. Nana's recipe card">
+              <label for="photo-notes">Notes <span class="optional">(optional)</span></label>
+              <textarea id="photo-notes" name="notes" rows="3"
+                        placeholder="Anything else we should know?"></textarea>
+            </div>
+            <div class="field">
+              <label for="photo-from">Your name <span class="optional">(optional)</span></label>
+              <input type="text" id="photo-from" name="submitted_by" placeholder="e.g. Grandma Jean">
             </div>
           </div>
-          <div class="field">
-            <label for="photo-notes">Notes <span class="optional">(optional)</span></label>
-            <textarea id="photo-notes" rows="3" placeholder="Anything else we should know?"></textarea>
-          </div>
-          <div class="field">
-            <label for="photo-from">Your name <span class="optional">(optional)</span></label>
-            <input type="text" id="photo-from" placeholder="e.g. Grandma Jean">
+          <div class="form-footer">
+            <div class="form-note">
+              Submissions are reviewed before being added to the collection.
+            </div>
+            <button type="submit" class="submit-btn">Send recipe →</button>
           </div>
         </div>
-        <div class="form-footer">
-          <div class="form-note">
-            Your email app will open with everything pre-filled — just attach the photo and send.
-          </div>
-          <button type="button" class="submit-btn" id="photo-mailto-btn">Open email to send →</button>
-        </div>
-      </div>
+      </form>
     </div>
 
     <!-- ══════════ PANEL 3: MANUAL ══════════ -->
@@ -594,34 +681,21 @@ document.querySelectorAll('[data-method]').forEach(btn => {
   });
 });
 
+// ── FILE INPUT LABEL ──────────────────────────────────
+const photoInput = document.getElementById('photo-input');
+if (photoInput) {
+  photoInput.addEventListener('change', () => {
+    const nameEl = document.getElementById('photo-file-name');
+    if (photoInput.files.length) {
+      nameEl.textContent = photoInput.files.length === 1
+        ? photoInput.files[0].name
+        : `${photoInput.files.length} photos selected`;
+      nameEl.style.display = 'block';
+    }
+  });
+}
 
-
-// ── PHOTO PANEL — mailto button ───────────────────────
-document.getElementById('photo-mailto-btn').addEventListener('click', () => {
-  const title  = document.getElementById('photo-title').value.trim();
-  const source = document.getElementById('photo-source').value.trim();
-  const notes  = document.getElementById('photo-notes').value.trim();
-  const from   = document.getElementById('photo-from').value.trim();
-
-  const subject = encodeURIComponent('Recipe submission — Photo' + (title ? ': ' + title : ''));
-
-  const bodyLines = [
-    'Hi,',
-    '',
-    "I'd like to add a recipe to the collection. Please find the photo attached.",
-    '',
-  ];
-  if (title)  bodyLines.push('Title:  ' + title);
-  if (source) bodyLines.push('Source: ' + source);
-  if (from)   bodyLines.push('From:   ' + from);
-  if (notes)  bodyLines.push('', 'Notes: ' + notes);
-  bodyLines.push('', '— Please attach your photo to this email before sending —');
-
-  const body = encodeURIComponent(bodyLines.join('\n'));
-  window.location.href = `mailto:huw.cushing@gmail.com?subject=${subject}&body=${body}`;
-});
-
-// ── FORMSPREE FORMS (url + manual) — AJAX for smooth UX ─
+// ── FORM SUBMISSIONS (AJAX for smooth UX) ─────────────
 document.querySelectorAll('form').forEach(form => {
   form.addEventListener('submit', async e => {
     e.preventDefault();
@@ -652,6 +726,14 @@ document.querySelectorAll('form').forEach(form => {
       alert('Something went wrong — please try again or email us directly.');
     }
   });
+});
+
+// ── HIDE SETUP NOTICE if Formspree is wired ───────────
+// (Checks if the action still contains the placeholder)
+document.querySelectorAll('form').forEach(form => {
+  if (!form.action.includes('xpqybzoj')) {
+    document.getElementById('setup-notice')?.classList.add('is-hidden');
+  }
 });
 
 </script>
