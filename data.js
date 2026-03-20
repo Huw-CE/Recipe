@@ -4908,6 +4908,473 @@ Place the pork, skin side up, on a tray lined with baking paper. Roast for about
 Remove the apples from the roasting tray and pour off the juices and fat into a small saucepan. Set over a medium heat and add the mustards and crème fraîche. Bring to a simmer, then check for seasoning and set aside.
 
 Cut the pork rack in between the bones into chops. Serve one warm chop per person with a few wedges of apple. Finally, spoon a generous tablespoon of warm sauce on top of each chop and serve straight away. A little sprinkle of salt on top of the sliced meat is also a good idea.`
+  },
+
+  // ── DANIELLE ALVAREZ — Always Add Lemon (batch 2) ──────────────────────────
+  {
+    id: 162,
+    title: "Tomato, Onion and Cheddar Tart",
+    author: "Danielle Alvarez",
+    book: "Always Add Lemon",
+    serves: "6-8",
+    time: "1 hr 30 mins",
+    category: "Vegetarian",
+    ingredients: [
+      "leafy salad, to serve",
+      "Pastry:",
+      "250 g (9 oz/1⅔ cups) plain (all-purpose) flour, plus extra for dusting",
+      "150 g (5½ oz) cold unsalted butter, diced",
+      "½ teaspoon salt",
+      "125 g (4½ oz/½ cup) sour cream",
+      "1 egg",
+      "Filling:",
+      "300 g (10½ oz) large heirloom tomatoes (approx. 1–2)",
+      "400 g (14 oz) white onion, thinly sliced",
+      "2 teaspoons chopped thyme",
+      "50 g (1¾ oz) unsalted butter",
+      "100 g (3½ oz) sour cream",
+      "100 g (3½ oz) grated cheddar cheese",
+      "3 eggs",
+      "1 tablespoon plain (all-purpose) flour",
+      "2 tablespoons cream",
+      "2 tablespoons grated parmesan"
+    ],
+    method: `Start by making your pastry. In the bowl of a food processor, combine the flour, butter and salt and pulse until the mixture resembles fine crumbs. Add the sour cream and egg and pulse a few more times until the pastry comes together in a ball. Shape this into a disc, wrap in plastic wrap and chill for at least 1 hour in the fridge.
+
+Preheat the oven to 180°C (350°F).
+
+Remove the pastry from the fridge, dust with flour and roll out to a 2–3mm (⅛in) thickness. Try to keep as round as possible. Gently lift this into the base of a 23–25cm (9–10in) pie dish or tart tin. You want to leave 1–2cm (½–¾in) of excess pastry hanging over the edge to allow for shrinkage as it bakes. Use scissors to trim off any wider bits. Press a sheet of baking paper on top of the pastry and fill with baking weights or uncooked rice or beans to prevent the pastry puffing up as it cooks. Place the dish on a tray and bake for 20–30 minutes. When the crust is looking golden on the edges, remove the baking weights and continue baking for a further 15–20 minutes. If the crust looks like it's puffing up, poke a few holes in it with a fork to allow steam to escape. When golden all over, remove from the oven and leave to cool completely. Reduce the oven temperature to 160°C (320°F), ready to bake the pie.
+
+Peel your tomatoes by cutting a small X on their base, dropping them into boiling water for 10–20 seconds, then immediately refreshing in iced water. The skin should now peel off easily, starting from the X. Cut into 5mm (¼in) slices. Set aside.
+
+In a sauté pan, sauté your onions and thyme in the butter until completely soft and translucent but not coloured. Season with salt and black pepper and set aside to cool. Once cool, mix with the sour cream, cheddar, eggs and flour. Pour the mixture into the base of the tart shell, then layer the sliced tomatoes over the top. Finally, sprinkle with the cream and parmesan and place on a tray. Bake for 40–60 minutes, or until the tart is no longer wobbly and is completely set. If the crust is browning too much, wrap the edge in foil to allow the custard to continue cooking. Remove from the oven and serve warm or at room temperature with a leafy salad.`
+  },
+  {
+    id: 163,
+    title: "Pici with Chicken, Liver and Marsala Ragù",
+    author: "Danielle Alvarez",
+    book: "Always Add Lemon",
+    serves: "4",
+    time: "1 hr 30 mins",
+    category: "Pasta",
+    ingredients: [
+      "1.2–1.5 kg (2 lb 10 oz–3 lb 5 oz) mixed chicken pieces (leg quarters, wings and chicken Maryland pieces)",
+      "200 g (7 oz) cleaned chicken livers",
+      "4 thyme sprigs",
+      "2 tablespoons olive oil",
+      "160 g (5⅔ oz) diced onion",
+      "160 g (5⅔ oz) diced carrot",
+      "100 g (3½ oz) diced celery",
+      "15 g (½ oz) minced garlic",
+      "1 teaspoon salt",
+      "800 ml (27 fl oz) chicken stock (or use store-bought)",
+      "100 ml (3¼ fl oz) red wine",
+      "50 ml (1¾ fl oz) marsala wine",
+      "30 g (1 oz) butter",
+      "1 bunch chopped flat-leaf (Italian) parsley",
+      "1 quantity fresh pici or use store-bought",
+      "grated parmesan, to serve"
+    ],
+    method: `Season your chicken pieces with salt and leave to sit for at least 15 minutes.
+
+Heat the olive oil in a large pot or Dutch oven over a high heat and add the chicken pieces to brown. You may need to do this in two batches. Brown the chicken pieces on at least two sides, then remove and set aside. This will take approximately 20 minutes. Next, add the thyme and livers to the pot and sear those as well. Remove, then add the vegetables, garlic and salt and sauté over a low heat for at least 20 minutes. Return all the chicken and livers to the pot, along with the stock, and bring to a simmer. Cover with a lid, slightly ajar, and simmer for 1 hour, then turn off the heat and let everything sit for 20 minutes.
+
+Remove the chicken pieces and thyme from the pot. Discard the thyme and pull all the meat off the bones. Discard the bones. Then chop the chicken and skin finely and add it back to the pot. At this point, you should check the braise for seasoning, but if it's done and seasoned to your liking, you can either use it straight away or refrigerate or freeze.
+
+To finish the dish, boil your pici for 2–3 minutes in heavily salted water until they float, then drain, reserving some of the pasta water. Add the butter and toss with the pasta in a wide sauté pan, reserving some of the braising liquid. Add the pasta to the pot and mix, taste for seasoning again. Then divide between four bowls, adding some black pepper and half of the chopped parsley, and toss together well.
+
+Top with grated parmesan and the remaining parsley, plus a few extra cracks of black pepper.`
+  },
+  {
+    id: 164,
+    title: "Linguine with Mussels and Nduja",
+    author: "Danielle Alvarez",
+    book: "Always Add Lemon",
+    serves: "4-6",
+    time: "45 mins",
+    category: "Pasta",
+    ingredients: [
+      "3 tablespoons olive oil",
+      "1 shallot, peeled and thinly sliced",
+      "1 bay leaf",
+      "2 kg (4 lb 6 oz) mussels",
+      "20 g (¾ oz) garlic, finely minced",
+      "1 heaped tablespoon nduja",
+      "1×400 g (14 oz) tin whole peeled tomatoes, peeled and chopped, or 6 fresh chopped, peeled tomatoes",
+      "150 ml (5 fl oz) white wine",
+      "250 ml (8½ fl oz/1 cup) chicken stock (or use store-bought)",
+      "500 g (1 lb 2 oz) linguine",
+      "40 g (1½ oz) butter",
+      "½ bunch flat-leaf (Italian) parsley, finely chopped",
+      "100 g (3½ oz) breadcrumbs, toasted"
+    ],
+    method: `Heat 1 tablespoon of the oil in a wide sauté pan and sauté the shallot until softened and translucent. Add the bay leaf, then the mussels and increase the heat to high. Add the white wine and cover the pan tightly with a lid. Leave the mussels to simmer and open for about 2 minutes. Remove the mussels from the pan, discarding any that remain closed and strain the mussel liquid. Remove the mussel meat from the shells and set aside, reserving it. Once cool, pull off any beards that might be attached.
+
+In a wide sauté pan, sauté the garlic and the nduja in the remaining olive oil for 1 minute over a medium heat. Crush the tomatoes with your hands and add to the pan, but discard the liquid in the tin. Sauté for another 2 minutes. Add the stock and the reserved mussel cooking liquid. Simmer until reduced by half.
+
+Boil the pasta in a pot of well-salted water until al dente, about 7 minutes, then remove it and add it to the sauce. Drop in the butter, mussel meat and chopped parsley and toss together well. Divide between four or six bowls and top with the breadcrumbs.`
+  },
+  {
+    id: 165,
+    title: "Whole Roasted John Dory with Lemon, Brown Butter, Capers and Nori",
+    author: "Danielle Alvarez",
+    book: "Always Add Lemon",
+    serves: "2",
+    time: "30 mins",
+    category: "Seafood",
+    ingredients: [
+      "1×800 g (1 lb 12 oz) John Dory, cleaned and head removed",
+      "2 nori sheets",
+      "90 ml (3 fl oz) olive oil",
+      "1 whole lemon, thinly sliced",
+      "60 g (2 oz/¼ cup) butter",
+      "2 tablespoons salt-packed capers, rinsed",
+      "1 bunch flat-leaf (Italian) parsley, leaves picked and chopped",
+      "juice of 1 lemon"
+    ],
+    method: `Preheat the oven to 250°C (480°F).
+
+Start by seasoning your fish with salt and pepper, and set aside. You want the fish to come to room temperature before cooking it.
+
+Next, make your nori oil. This can also be done well in advance. Toast the sheets of nori directly under the grill (broiler), or over the flame of a gas burner, holding the sheets with tongs and gently brushing them over the flame. Keep them moving so they don't burn. Allow to cool, then crush up and place in a blender with 50ml (1¾fl oz) of the oil and a pinch of salt. Blend on high until the oil looks black and smooth. Set aside.
+
+Place the fish on a flat roasting tray and drizzle with the remaining oil. Arrange the lemon slices on top, then roast for 13–15 minutes, or longer if your fish is bigger. Remove from the oven and brush half the nori oil over the top of the fish. Set aside to rest.
+
+In a small pot, heat the butter over a medium heat until foaming and brown, then add the capers and parsley to sizzle for 1 minute. Pour this over the fish and squeeze over the lemon juice.
+
+Fillet the fish by using a fork to remove the top fillets from the three fillets on each side. Using the back of a spoon, gently do the same on the bottom. Push those fillets off the bone and place on a pre-warmed serving plate. If you've cooked it perfectly, it should look just the tiniest bit pink on the inside. Flip it over and remove the fillets from the other side. Finish by pouring all of that beautiful sauce and the remaining nori oil over the top of the fillets and serve immediately.`
+  },
+
+  // ── YOTAM OTTOLENGHI — OTK: Extra Good Things ─────────────────────────────
+  {
+    id: 166,
+    title: "Cinnamon Apple Roulade",
+    author: "Yotam Ottolenghi",
+    book: "OTK: Extra Good Things",
+    serves: "8-10",
+    time: "2 hrs",
+    category: "Dessert",
+    ingredients: [
+      "Apples:",
+      "150g runny honey",
+      "1 vanilla pod, halved lengthways, seeds scraped out and reserved",
+      "5 fresh bay leaves",
+      "1 cinnamon stick",
+      "¾ tsp ground cinnamon",
+      "¼ tsp flaked sea salt",
+      "3½ tbsp orange juice",
+      "1.1kg Braeburn apples (about 7–8), peeled, cored and each cut into 6 wedges",
+      "1 tbsp olive oil",
+      "Roulade:",
+      "250g caster sugar",
+      "100g light soft brown sugar",
+      "6 large eggs (or 8 if they're larger)",
+      "250g egg whites (from egg white carton)",
+      "1 tbsp olive oil",
+      "2 tsp cornflour",
+      "1½ tsp ground cinnamon",
+      "1 tbsp vanilla bean paste or vanilla extract",
+      "2 tsp white wine vinegar",
+      "Cream:",
+      "250g mascarpone, fridge cold",
+      "150ml whipping cream, fridge cold",
+      "20g icing sugar",
+      "1 tbsp finely grated orange zest, plus 1 tsp extra to garnish"
+    ],
+    method: `1. Preheat the oven to 200°C fan. Start making the filling. Put the honey, vanilla seeds and pod, bay leaves, cinnamon stick, ground cinnamon and salt into a large ovenproof sauté pan on a medium-high heat. Bring to a simmer and cook for 5–6 minutes, stirring often, until the honey is deeply brown (don't be afraid to take it to the edge; you want it to be very dark). Off the heat, whisk in the orange juice. Gently pour 65g of the burnt honey into a heatproof bowl. Pick out the bay leaves and vanilla pod and add them to the bowl.
+
+2. Stir the apples and olive oil into the sauté pan with the remaining honey, then transfer to the oven for 20 minutes, stirring halfway through, until the apples have softened and caramelised but still retain their shape. Set aside to cool completely. Pick out the cinnamon stick and add it to the reserved burnt honey bowl.
+
+3. Make the roulade. Line a large 40cm × 30cm baking tray with baking parchment.
+
+4. Put the egg whites into the bowl of a stand mixer with the whisk attachment in place and whisk on medium-high speed for 1 minute, until frothy. Combine both sugars in a bowl and gradually add this to the mixer, whisking continuously on high speed for 5 minutes, until the mixture is a thick glossy meringue. Reduce the speed to low and add the vanilla, cinnamon, vinegar and cornflour. Turn the speed to medium and whisk for a minute, to fully combine.
+
+5. Spoon the meringue on to the prepared tray and use a spatula to spread it out evenly (it's about 35cm × 25cm). Bake for 30–32 minutes, until the meringue is crusty on top and lightly brown. Set aside to cool completely.
+
+6. Meanwhile, prepare the cream by putting the icing sugar and mascarpone into the cleaned bowl of the stand mixer with the whisk attachment. Beat on medium speed for 1–2 minutes, until soft peaks form. Add the whipping cream and beat on medium-high speed until soft peaks form. Gently fold the two creams together.
+
+7. Place a clean tea towel on a work surface and quickly invert the whole meringue on to it, then peel away the lining paper.
+
+8. Spread the cream evenly over three-quarters of the meringue. Top evenly with the apples (reserving any liquid burnt honey for another use).
+
+9. Starting with the longest side closest to you, use the tea towel to help roll the meringue up and over, so that the edges come together to form a log. Gently pull the tea towel away as you roll, then slide the roulade on to a long tray or platter, seam side down. Use a serrated knife to trim off 2cm from the edges. Refrigerate to firm up, at least 30 minutes.
+
+10. To serve, spoon the remaining burnt honey syrup down the length of the roulade. Top artfully with the bay leaves, vanilla pod halves and cinnamon stick. Sprinkle with the extra orange zest.`
+  },
+  {
+    id: 167,
+    title: "Coconut Granita with Chilli Lime Pineapple and Crispy Coconut",
+    author: "Yotam Ottolenghi",
+    book: "OTK: Extra Good Things",
+    serves: "6",
+    time: "1 hr + 8 hrs freezing",
+    category: "Dessert",
+    ingredients: [
+      "Coconut granita:",
+      "500ml unsweetened coconut water",
+      "500ml full-fat coconut milk (70%)",
+      "150ml condensed coconut milk (about 120g)",
+      "4–5 limes: 3 tbsp juice, and 1 lime cut into 4 wedges to serve",
+      "Crispy coconut:",
+      "100g coconut flakes (aka coconut chips)",
+      "½ tsp flaked sea salt",
+      "⅓ tsp vanilla bean paste or vanilla extract",
+      "1 tsp ground star anise",
+      "Chilli pineapple:",
+      "1 medium pineapple, tough skin and core discarded (420g)",
+      "2 limes: 1½ tbsp juice and 1½ tbsp finely grated zest",
+      "1 tsp Aleppo chilli",
+      "½ tsp flaked sea salt"
+    ],
+    method: `1. Start with the granita. Put the coconut water and condensed coconut milk into a small saucepan and place it on a medium-high heat, stirring to dissolve the sugar. Once dissolved, remove from the heat and set aside to cool slightly, about 15 minutes. Add the lime juice and full-fat coconut milk and whisk to combine. Transfer to a container with a lid and freeze for 2 hours. Use a fork to scrape against the sides of the mixture (it'll still be a bit wet at this point). Cover and freeze, repeating this process every 45 minutes for the next 6 hours; you should be left with white granita 'snow'.
+
+2. Meanwhile, make the crispy coconut. Preheat the oven to 160°C fan. Line a medium baking tray (roughly 34cm × 34cm) with baking parchment. Put the condensed milk, star anise, vanilla paste, salt and 1 tablespoon of water into a medium saucepan on a medium-high heat and cook, stirring often, until the mixture starts to bubble. Add the coconut flakes, stir to evenly coat, then transfer to the prepared tray and spread out. Bake for 20 minutes, stirring three times throughout, until deeply golden. Set aside to cool, then roughly break it up into clusters.
+
+3. Cut the pineapple lengthways into three long wedges, then cut each wedge into ½cm-thick slices (they'll look like little triangles). Transfer to a large bowl with the chilli, lime juice and salt, and toss to combine.
+
+4. Remove the granita from the freezer about 10 minutes before serving, giving it a final scrape with a fork. Divide the granita, pineapple and crispy coconut between six bowls. Sprinkle with the lime zest and serve with the lime wedges alongside.`
+  },
+  {
+    id: 168,
+    title: "Coffee Mousse with Tahini Fudge",
+    author: "Yotam Ottolenghi",
+    book: "OTK: Extra Good Things",
+    serves: "6",
+    time: "25 mins + chilling",
+    category: "Dessert",
+    ingredients: [
+      "1¾ tbsp instant coffee (not granules)",
+      "1¼ tsp cocoa powder",
+      "1 tsp vanilla bean paste or vanilla extract",
+      "1½ tbsp maple syrup",
+      "250ml double cream, fridge cold",
+      "2 large egg whites",
+      "70g caster sugar",
+      "¼ tsp salt",
+      "Tahini fudge:",
+      "75g tahini",
+      "60ml maple syrup",
+      "1½ tbsp cocoa powder",
+      "1 tsp vanilla bean paste or vanilla extract",
+      "¼ tsp salt",
+      "50g roasted and salted mixed nuts, roughly chopped"
+    ],
+    method: `1. For the mousse, put the coffee, cocoa powder, vanilla bean paste, maple syrup and cream into the bowl of a stand mixer with the whisk attachment in place. Whisk on medium-high speed for 1½–2 minutes, or until you have soft peaks. Transfer to a large bowl.
+
+2. Rinse and dry the stand mixer bowl, then add the egg whites and mix on medium-high speed for a minute, until frothy. With the machine running, stream in the sugar and ¼ teaspoon of salt. Turn the speed to high and mix for 3–4 minutes, or until shiny and stiff peaks form. Gently fold this into the cream mixture, cover and refrigerate for a couple of hours until well chilled, or until just before you want to serve. Alternatively, make the mousse and refrigerate overnight.
+
+3. Combine all the ingredients for the tahini fudge in a bowl, add 3 tablespoons of water and whisk until smooth. Whisk again (to aerate) and divide between six small bowls or ramekins, then follow with spoonfuls of the tahini fudge sauce. Sprinkle with the nuts and serve.`
+  },
+  {
+    id: 169,
+    title: "Lemon Posset with Meringue and Burnt Lemon",
+    author: "Yotam Ottolenghi",
+    book: "OTK: Extra Good Things",
+    serves: "8",
+    time: "2 hrs + overnight",
+    category: "Dessert",
+    ingredients: [
+      "Labneh:",
+      "450g Greek-style yoghurt",
+      "¼ tsp salt",
+      "Posset:",
+      "1 tbsp finely grated lemon zest",
+      "200ml lemon juice (from about 4–5 lemons), plus 1 lemon to serve",
+      "650ml double cream",
+      "250g caster sugar",
+      "200g labneh (see above)",
+      "Meringue:",
+      "115g egg whites (from 1–2 eggs)",
+      "250g caster sugar",
+      "¼ tsp cream of tartar",
+      "Burnt lemon (optional), to serve"
+    ],
+    method: `1. For the labneh, put the yoghurt and salt into a bowl and mix well. Line a medium sieve with a piece of cheesecloth, or a clean tea towel, with plenty of cloth hanging over the sides. Add the yoghurt, using the sieve to completely encase it, then set the sieve over a bowl and place a weight on top (a couple of tins will do). Refrigerate overnight. When the labneh is ready, discard the liquid collected and store the labneh in a sealed container in the fridge for up to 3 days. You'll make about 250g of labneh. Measure out 200g for the possets and use the rest for breakfast or to spread on toast.
+
+2. For the posset, combine the lemon zest, juice and sugar in a medium saucepan and bring to the boil on a medium-high heat, stirring occasionally to dissolve the sugar. In a separate saucepan, warm the double cream on a medium heat until just starting to gently bubble. Off the heat, pour all the cream into the lemon mixture and whisk to combine, then whisk in the labneh until smooth. Strain through a fine-mesh sieve. Divide between eight tall glasses. Refrigerate for at least 4 hours, or overnight.
+
+3. For the meringue, set the oven to 160°C fan. Spread the sugar out on a parchment-lined tray and bake for 10 minutes. Put the egg whites and cream of tartar into the bowl of a stand mixer with the whisk attachment in place and beat on medium speed until frothy. With the mixer running, slowly stream in the warm sugar. Once all in, turn the oven temperature down to 100°C fan and bake the meringue for another 5–6 minutes until glossy and stiff peaks form.
+
+4. Line a large 40cm × 30cm baking tray with parchment. Spread the meringue mixture on to the base (it's about 35cm × 25cm). Bake for 80–90 minutes, until completely dried out. Set aside to cool, then roughly break apart into random shards.
+
+5. Segment one of the lemons using a small, sharp knife to trim off the pith and peel. Cut between the membranes to release the segments. Roughly chop each segment into 2–3 pieces.
+
+6. To serve, top the possets with the lemon segments, a sprinkling of burnt lemon powder (if using) and a few meringue shards, serving any extra meringue alongside.`
+  },
+  {
+    id: 170,
+    title: "Devil's Food Cake with Hazelnut Praline",
+    author: "Yotam Ottolenghi",
+    book: "OTK: Extra Good Things",
+    serves: "8",
+    time: "1 hr 30 mins",
+    category: "Baking",
+    ingredients: [
+      "75g cocoa powder",
+      "190g plain flour",
+      "1 tsp baking powder",
+      "1 tsp bicarbonate of soda",
+      "200g caster sugar",
+      "150g dark soft brown sugar",
+      "150g sunflower oil (by volume, not by weight), plus extra for greasing",
+      "2 large eggs, plus extra for brushing",
+      "150g plain kefir (or buttermilk)",
+      "220ml very hot coffee, plus 20ml extra at room temperature for brushing",
+      "salt",
+      "Hazelnut praline:",
+      "200g blanched hazelnuts",
+      "180g caster sugar",
+      "salt",
+      "Mascarpone cream:",
+      "300ml double cream",
+      "100g mascarpone",
+      "2 tbsp malted milk powder (we use Horlicks)",
+      "30g icing sugar"
+    ],
+    method: `1. Preheat the oven to 180°C fan. Line the bottom of two 20cm round cake tins (that have a removable base) with baking parchment and grease the sides.
+
+2. Put the cocoa powder, flour, bicarbonate of soda, baking powder, salt and the sugars into a large bowl and use a whisk to combine and get rid of any lumps. Put the oil, eggs and kefir into a separate bowl and whisk just to combine. Add this to the dry mixture and use a spatula to gently fold through. Lastly add the hot coffee and mix gently to combine. It will look very runny at first, but will soon come together into a glossy, pourable batter.
+
+3. Divide the batter evenly between the two prepared cake tins (about 600g per tin). Bake for 30 minutes, or until a skewer inserted into the middle comes out clean. Set aside to cool for about 30 minutes, then slide a butter knife around the sides to help release each cake. Brush the tops lightly with the extra coffee, discarding any left over.
+
+4. Invert one cake on to a board, remove the lining paper, then invert it again on to a cake stand or serving platter, domed side up. Invert the other cake on to a board.
+
+5. Meanwhile, make the praline. Spread the hazelnuts out on a parchment-lined tray and bake for 12–15 minutes, shaking the tray halfway through, or until deeply golden. Set aside. Place a large saucepan on a medium-high heat and, once hot, sprinkle in a third of the caster sugar to cover the base. Swirl the pan, allowing it to melt at the sides. Gradually add another third, then the remaining third. It should melt to an amber caramel. Add the hazelnuts and mix for a couple of seconds, then quickly transfer to your parchment-lined tray and leave to cool completely.
+
+6. Once cool, roughly break apart the praline, then transfer it to a food processor. Pulse a few times until you have very coarse crumbs, then measure out 75g and transfer to a separate bowl. Blitz the remaining mixture for about 4–5 minutes until it has the consistency of a smooth nut butter. Transfer to a separate bowl.
+
+7. Put all the mascarpone cream ingredients plus a tiny pinch of salt into the bowl of a stand mixer and beat on medium-high speed for 1½–2 minutes, or until medium peaks form.
+
+8. When ready to assemble, top the cake on the stand with half the mascarpone cream. Spoon over about 2 tablespoons of the smooth praline and gently swirl it through. Sprinkle with half the praline crumble.
+
+9. Top with the second cake, removing the paper. Repeat the same process with the remaining cream, smooth praline and praline crumble. Serve right away, or refrigerate until ready to serve.`
+  },
+  {
+    id: 171,
+    title: "Black Lime Focaccia with Smoky Chipotle Oil",
+    author: "Yotam Ottolenghi",
+    book: "OTK: Extra Good Things",
+    serves: "6",
+    time: "1 hr + overnight",
+    category: "Baking",
+    ingredients: [
+      "Dough:",
+      "15g dried black limes (about 3 large ones)",
+      "2 tbsp sesame seeds, toasted",
+      "1 tsp flaked sea salt",
+      "300ml lukewarm water",
+      "1 tsp fast-action dried yeast",
+      "2 tsp light soft brown sugar",
+      "500g plain flour",
+      "150ml olive oil, plus extra for greasing",
+      "salt",
+      "Smoky chipotle oil:",
+      "8 garlic cloves, peeled and thinly sliced lengthways",
+      "135ml olive oil",
+      "¾ tsp chipotle chilli flakes",
+      "½ tsp sweet smoked paprika"
+    ],
+    method: `1. Put the flour and 1 teaspoon of table salt into a large bowl. Sprinkle the yeast into the warm water, add the sugar and 4 tablespoons of the oil, then whisk to combine. Add the yeast mixture to the flour and bring the dough together using your dominant hand. It will be quite sticky but keep at it, making sure to incorporate all the dry ingredients. Lightly grease the top of the dough with a little oil, then cover with a piece of cling film or reusable plastic wrap and set aside at room temperature for 1 hour.
+
+2. Fold the dough in the bowl, working very gently — this'll help build the air bubbles in the focaccia. Using well-oiled hands, as if it were a square, gently reach up and under the dough, folding the two opposite sides to meet in the middle. Repeat with the other two opposite sides. Turn the dough over, smooth side up, and lightly oil the top again. Cover with cling film or reusable plastic wrap and leave to rest for another half hour.
+
+3. Repeat this folding process again, then cover the dough and refrigerate overnight.
+
+4. The next day, remove the dough from the fridge and bring it back up to room temperature, about 1½–2 hours. Meanwhile, put 4 tablespoons of the black lime into a bowl, blitz to a coarse grind in a spice grinder and set aside. Put the garlic and olive oil into a small saucepan on a medium heat. Add the chipotle and paprika and cook for 8 minutes, until starting to crisp up. Add ⅛ teaspoon of salt. Transfer to a heatproof bowl to cool.
+
+5. Oil a 33cm × 23cm baking tin (at least 3cm deep). Pour the remaining oil into the tin and use oiled hands to gently shape the dough into a rough rectangle to fit the tin. Sprinkle a third of the black lime mixture and fold the two shorter ends to meet in the middle, then fold over the top with another third of the black lime mixture. Cover with a clean tea towel and leave for 30 minutes.
+
+6. Using oiled hands, very gently spread the dough out as far as it'll let you. Use your fingers to create little dimples on the surface. Sprinkle over the remaining black lime mixture, followed by the sesame seeds and flaked sea salt.
+
+7. Make the brine by whisking together 50ml room-temperature water and ¾ teaspoon of table salt in a bowl until dissolved. Pour the brine all over the surface of the dough, allowing it to pool in the dimples. Cover with the tea towel and set aside for another 30 minutes.
+
+8. Preheat the oven to 230°C fan. Drizzle a tablespoon of oil over the dough and bake for 15 minutes, then rotate the tray and bake for another 12 minutes. Turn the heat down to 180°C fan, drizzle another tablespoon of oil over the dough and bake for another 30 minutes.
+
+9. Cut the focaccia into 12–16 pieces. Carefully use a spatula to release the focaccia from its tin and transfer it to a wire rack to cool completely. Serve with the chipotle oil to dip alongside.`
+  },
+  {
+    id: 172,
+    title: "Farinata with Jammy Onions",
+    author: "Yotam Ottolenghi",
+    book: "OTK: Extra Good Things",
+    serves: "4-6",
+    time: "30 mins + 4 hrs resting",
+    category: "Snacks",
+    ingredients: [
+      "Farinata:",
+      "180g gram flour",
+      "75ml olive oil",
+      "2 tsp fennel seeds",
+      "1 tbsp picked and roughly chopped rosemary leaves, plus 3 sprigs",
+      "1½ tbsp picked thyme leaves, plus 3 sprigs",
+      "salt",
+      "Jammy onions:",
+      "3 tbsp olive oil",
+      "3 onions, peeled, halved and finely sliced (540g)",
+      "1 tbsp light soft brown sugar",
+      "2 tsp white miso",
+      "2 tbsp Chinkiang vinegar",
+      "salt"
+    ],
+    method: `1. Make the batter. Put the gram flour into a large mixing bowl, whisking to get rid of any lumps. Slowly pour in 450ml of room-temperature water, adding a little at a time and whisking to create a smooth batter, sans lumps. Cover the bowl with a plate and set aside at room temperature for 4 hours or longer (up to overnight).
+
+2. Meanwhile, make the jammy onions. Heat the oil in a large sauté pan over a medium-high heat. Add the onions and ½ teaspoon of salt and turn the heat down to medium. Cook, stirring often, for 30 minutes, or until very soft and caramelised. Add the sugar, miso and vinegar and cook for just 5 minutes more. Remove from the heat to cool down completely. If making the day before, store in a sealed jar in the fridge with a bit more oil on top of the onions to cover. Bring back to room temperature before serving.
+
+3. Preheat the oven to 220°C fan. Line the bottom of a Swiss roll tin (measuring 33cm × 23cm, at least 3cm deep) with a piece of baking parchment to cover the base (but not the sides — we want crispy edges!). Add the 75ml of oil and swirl to coat the base and sides.
+
+4. Add ½ teaspoon of salt to the batter and give it a good whisk (it might have separated a little). Put the batter into the prepared tin and use a fork to whisk and incorporate the froth. Sprinkle all over with the fennel seeds and over with the picked rosemary and thyme. Artfully arrange the rosemary and thyme sprigs on the batter (don't push them in). Bake for 25–30 minutes, rotating the tin halfway through, or until golden around the edges and cooked through the centre. Set aside to cool for 5 minutes, then run a small sharp knife around the edges, releasing the farinata from the tin. Gently transfer to a large wooden board. Use a pizza cutter or large knife to cut it into slabs and serve with the jammy onions alongside to smear on top.`
+  },
+  {
+    id: 173,
+    title: "Potato Slab Pie with Salsa Verde",
+    author: "Yotam Ottolenghi",
+    book: "OTK: Extra Good Things",
+    serves: "8",
+    time: "Prep 35 mins + Cook 1 hr 20 mins",
+    category: "Vegetarian",
+    ingredients: [
+      "640g ready-rolled all-butter puff pastry rectangles (2 packs)",
+      "200g Gruyère, roughly crumbled",
+      "75g Greek feta, roughly crumbled",
+      "200g spring onions, trimmed and finely sliced (100g)",
+      "30g parsley, finely chopped",
+      "15g mint leaves, finely chopped",
+      "4 large King Edward potatoes, washed and very thinly sliced on a mandolin or by hand (540g)",
+      "100g crème fraîche",
+      "200ml double cream",
+      "1 large egg yolk plus 3 large eggs",
+      "1¼ tsp sesame seeds",
+      "salt and black pepper",
+      "Salsa verde:",
+      "10g picked parsley leaves",
+      "10g picked basil leaves",
+      "15g picked mint leaves",
+      "40g pitted green olives, roughly torn in half",
+      "2 garlic cloves, peeled and roughly chopped",
+      "15g anchovies packed in olive oil, drained and roughly chopped",
+      "60ml olive oil, plus extra for greasing",
+      "2 tbsp apple cider vinegar",
+      "salt"
+    ],
+    method: `1. Preheat the oven to 180°C fan and place a large baking sheet inside to heat up.
+
+2. Grease a 32cm × 22cm × 3cm Swiss roll tin. Line with a piece of baking parchment large enough to cover the base and rise about 4cm up and over the sides (this will help you lift out the pie later).
+
+3. Take one of the puff pastry sheets and roll it out to form a 38cm × 28cm rectangle. Transfer to the prepared tin, making sure to push it inside the corners and up the sides. Refrigerate while you prepare the filling.
+
+4. In a large mixing bowl, combine both the cheeses, spring onions, herbs and the olives. Add the crème fraîche and potatoes. Try to separate the potato slices as much as possible. Add a generous grind of pepper and ¼ teaspoon of salt and combine.
+
+5. Transfer the potato mixture into the pastry-lined tin, filling the corners and pressing down so that it is tightly and evenly distributed.
+
+6. In a medium jug or bowl, whisk the three eggs, the extra yolk, double cream and crème fraîche. Pour this evenly over the filling.
+
+7. Unroll the second piece of puff pastry and lay it on top of the potatoes, tucking it between the pastry and the potato sides. With a slight lifting and pulling motion, fold the pastry edges over and press down gently. Brush the edges with egg wash to seal. Sprinkle over the sesame seeds. Using a sharp knife, make seven diagonal scores along the length of the pie, each around 5cm long.
+
+8. Place the pie tin on the hot baking tray in the top of the oven and bake for 30 minutes. Rotate the tin and bake for another 30 minutes until golden and cooked through. If the top gets too dark, turn the heat down to 170°C fan. Remove from the oven and leave to cool in the tin on a wire rack for about 1 hour.
+
+9. Use the paper overhang to lift the pie out of the tin and transfer to a wire rack to cool completely. Cut into 20 squares.
+
+10. While the pie is cooling, make the salsa verde. Put all the herbs, olives, garlic, anchovies, olive oil, vinegar and plenty of pepper into a food processor. Blitz until you have a rough, saucy consistency. Serve the pie squares with the salsa verde alongside.`
   }
 ];
 
@@ -5390,6 +5857,7 @@ const ALL_INGREDIENTS = Object.keys(INDEX).sort();
 //  AUTHOR METADATA
 // ══════════════════════════════════════════════════════
 const AUTHOR_META = {
+  "Yotam Ottolenghi":   { initials:"YO", color:"#2C6B8A", bg:"rgba(44,107,138,0.12)",  desc:"The Ottolenghi Test Kitchen series distils the creativity of Yotam Ottolenghi and his team into inventive, pantry-driven cooking. OTK: Extra Good Things builds flavour from scratch with bold, reusable components." },
   "Danielle Alvarez":   { initials:"DA", color:"#8B5E3C", bg:"rgba(139,94,60,0.12)",  desc:"Sydney-based chef and restaurateur whose cooking draws on California and Mediterranean influences. Always Add Lemon is a love letter to bright, generous, seasonal food." },
   "Jamie Oliver":       { initials:"JO", color:"#C05A2C", bg:"rgba(192,90,44,0.12)",  desc:"Quick, fresh and accessible recipes stripped back to their essentials. Jamie's 5 Ingredients collection proves great cooking doesn't need to be complicated." },
   "Donna Hay":          { initials:"DH", color:"#7A8C6E", bg:"rgba(122,140,110,0.12)", desc:"Elegant, beautifully balanced recipes from Australia's queen of accessible food styling. Donna's Balanced collection focuses on wholesome, fuss-free everyday cooking." },
