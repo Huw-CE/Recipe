@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Favourites — Cooking at Livingstone</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared.css">
+</head>
+<body>
+
+<nav class="nav" id="main-nav">
+  <a href="index.html" class="nav-brand">Cooking at <em>Livingstone</em></a>
+  <button class="nav-toggle" id="nav-toggle" aria-label="Menu">☰</button>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="index.html" class="nav-link">Home</a></li>
+    <li><a href="browse.html" class="nav-link">Recipes</a></li>
+    <li><a href="authors.html" class="nav-link">Authors</a></li>
+    <li><a href="categories.html" class="nav-link">Categories</a></li>
+    <li><a href="ingredient-index.html" class="nav-link">Ingredient Index</a></li>
+  </ul>
+</nav>
+
+<main>
+  <section class="subpage-hero" id="fav-hero">
+    <div class="hero-eyebrow">Your collection</div>
+    <h1>My <em>Favourites</em></h1>
+    <div class="subpage-meta">
+      <span id="fav-hero-count">—</span>
+    </div>
+    <div class="hero-rule"></div>
+  </section>
+
+  <div class="browse-layout">
+
+    <!-- ════════ SIDEBAR ════════ -->
+    <aside class="sidebar" id="sidebar">
+      <div class="mob-sheet-head">
+        <span class="mob-sheet-label">Filters</span>
+      </div>
+      <div id="sidebar-inner">
+
+        <!-- Filter by Author -->
+        <div class="sidebar-title">Filter by Author</div>
+        <div id="author-filters"
+             style="margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border);">
+        </div>
+
+        <!-- Ingredients A–Z -->
+        <div class="sidebar-title">Ingredients A–Z</div>
+        <div class="ing-search-wrap">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+          </svg>
+          <input type="text" id="ing-search" placeholder="Search ingredients…">
+        </div>
+        <div id="ing-list"></div>
+
+      </div>
+    </aside>
+
+    <!-- ════════ MAIN CONTENT ════════ -->
+    <div class="browser-main" id="page-main">
+      <div class="empty"><div class="empty-icon">⏳</div><p>Loading…</p></div>
+    </div>
+
+  </div>
+
+  <div class="mob-backdrop" id="mob-backdrop"></div>
+  <button class="mob-trigger" id="mob-trigger">
+    <span>Filters <span class="mob-summary" id="mob-summary">All favourites</span></span>
+    <span>☰</span>
+  </button>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-eyebrow">Kitchen Notes</div>
+      <div class="footer-title">Cook well, share often, <em>eat together</em></div>
+    </div>
+    <div class="footer-note"><a href="submit.html" class="footer-submit-btn">Add a recipe →</a></div>
+  </div>
+</footer>
+
+<script src="data.js"></script>
+<script>
+
+const favIds     = loadFavs();
+window.lvFavIds  = favIds;
+let activeAuthor = null;
+let activeIng    = null;
+
+// ── HELPERS ──────────────────────────────────────────
+function getFavRecipes() {
+  return RECIPES.filter(r => favIds.has(r.id));
+}
+
+function getFiltered() {
+  return getFavRecipes().filter(r => {
+    if (activeAuthor && r.author !== activeAuthor)                                return false;
+    if (activeIng    && !r.ingredients.some(i => normalizeIng(i) === activeIng)) return false;
+    return true;
+  });
+}
+
+// ── HERO COUNT ───────────────────────────────────────
+function updateHeroCount() {
+  const n = getFavRecipes().length;
+  document.getElementById('fav-hero-count').textContent =
+    n === 0 ? 'No favourites yet'
+    : n === 1 ? '1 recipe saved'
+    : `${n} recipes saved`;
+}
+
+// ── AUTHORS SIDEBAR ──────────────────────────────────
+function renderAuthors() {
+  const el      = document.getElementById('author-filters');
+  const favRecs = getFavRecipes();
+  const authors = [...new Set(favRecs.map(r => r.author))].sort();
+
+  if (!authors.length) { el.innerHTML = ''; return; }
+
+  el.innerHTML = authors.map(a => {
+    const countInFiltered = favRecs.filter(r => {
+      if (activeIng && !r.ingredients.some(i => normalizeIng(i) === activeIng)) return false;
+      return r.author === a;
+    }).length;
+    return `
+      <button class="author-filter ${activeAuthor===a?'is-active':''}" data-a="${escHtml(a)}"
+              ${countInFiltered===0 && activeAuthor!==a ? 'style="opacity:.4;"' : ''}>
+        <div>
+          <span class="author-filter-name">${escHtml(a)}</span>
+          <span class="author-filter-book">${escHtml(RECIPES.find(r=>r.author===a)?.book||'')}</span>
+        </div>
+        <span class="badge">${countInFiltered}</span>
+      </button>`;
+  }).join('');
+
+  el.querySelectorAll('[data-a]').forEach(btn => btn.addEventListener('click', () => {
+    activeAuthor = activeAuthor === btn.dataset.a ? null : btn.dataset.a;
+    renderAuthors(); renderIngList(); renderMain();
+    if (window.innerWidth <= 768) { mobSheetOpen = false; syncMob(); }
+  }));
+}
+
+// ── INGREDIENT LIST ──────────────────────────────────
+function renderIngList(filter = '') {
+  const el       = document.getElementById('ing-list');
+  const filtered = getFiltered();
+
+  const relevant = new Set();
+  filtered.forEach(r => r.ingredients.forEach(i => {
+    const n = normalizeIng(i); if (n) relevant.add(n);
+  }));
+
+  const ings   = ALL_INGREDIENTS.filter(i => relevant.has(i) && i.includes(filter.toLowerCase()));
+  const groups = groupByLetter(ings);
+
+  el.innerHTML = Object.keys(groups).sort().map(letter => `
+    <div class="ing-group">
+      <div class="ing-letter">${letter}</div>
+      ${groups[letter].map(ing => `
+        <button class="ing-btn ${activeIng===ing?'is-active':''}" data-ing="${ing}">
+          <span>${escHtml(INDEX[ing].display)}</span>
+          <span class="badge">${filtered.filter(r=>r.ingredients.some(i=>normalizeIng(i)===ing)).length}</span>
+        </button>`).join('')}
+    </div>`).join('');
+
+  el.querySelectorAll('[data-ing]').forEach(btn => btn.addEventListener('click', () => {
+    activeIng = activeIng === btn.dataset.ing ? null : btn.dataset.ing;
+    renderIngList(document.getElementById('ing-search').value);
+    renderAuthors(); renderMain();
+    if (window.innerWidth <= 768) { mobSheetOpen = false; syncMob(); }
+  }));
+}
+
+// ── MAIN CONTENT ─────────────────────────────────────
+function renderMain() {
+  const main      = document.getElementById('page-main');
+  const favRecs   = getFavRecipes();
+  const filtered  = getFiltered();
+  const hasFilter = activeAuthor || activeIng;
+
+  // Empty — not signed in or no favs yet
+  if (favRecs.length === 0) {
+    main.innerHTML = `
+      <div class="empty" style="padding-top:60px;">
+        <div class="empty-icon">❤️</div>
+        <p style="margin-bottom:16px;">You haven't saved any favourites yet.</p>
+        <a href="browse.html" style="color:var(--rust);font-size:14px;">Browse all recipes →</a>
+      </div>`;
+    return;
+  }
+
+  const pills = [];
+  if (activeAuthor) pills.push(`<span class="filter-pill">${escHtml(activeAuthor)} <button class="pill-remove" data-remove="author">×</button></span>`);
+  if (activeIng)    pills.push(`<span class="filter-pill">${escHtml(INDEX[activeIng]?.display||activeIng)} <button class="pill-remove" data-remove="ing">×</button></span>`);
+
+  // Group filtered favs by category
+  const grouped = filtered.reduce((a,r) => {
+    (a[r.category]||(a[r.category]=[])).push(r); return a;
+  }, {});
+
+  const sections = Object.keys(grouped).sort().map(cat => `
+    <div class="recipe-sec">
+      <div class="recipe-sec-header">
+        <h3 class="recipe-sec-title">
+          <a href="category.html?name=${encodeURIComponent(cat)}"
+             style="text-decoration:none;color:inherit;">${escHtml(cat)}</a>
+        </h3>
+        <span class="recipe-sec-count">${grouped[cat].length} recipe${grouped[cat].length!==1?'s':''}</span>
+      </div>
+      <div class="recipe-grid">${grouped[cat].map(r => recipeCardHtml(r, favIds)).join('')}</div>
+    </div>`).join('');
+
+  main.innerHTML = `
+    <div class="browser-toolbar">
+      <div style="flex:1;min-width:0;">
+        <div class="browser-heading">${hasFilter ? 'Filtered <em>Favourites</em>' : 'All <em>Favourites</em>'}</div>
+        <div class="browser-count">${hasFilter ? filtered.length + ' recipe' + (filtered.length!==1?'s':'') : ''}</div>
+        <div class="active-filters" id="active-filters">${pills.join('')}</div>
+      </div>
+      ${hasFilter ? '<button class="clear-btn" id="clear-btn">Clear</button>' : ''}
+    </div>
+    ${filtered.length
+      ? sections
+      : '<div class="empty"><div class="empty-icon">🔍</div><p>No favourites match this filter.</p></div>'}
+  `;
+
+  attachFavListeners(main, favIds);
+
+  main.querySelectorAll('[data-remove]').forEach(btn => btn.addEventListener('click', () => {
+    if (btn.dataset.remove === 'author') activeAuthor = null;
+    if (btn.dataset.remove === 'ing')    activeIng    = null;
+    renderAuthors(); renderIngList(); renderMain();
+  }));
+  const clearBtn = document.getElementById('clear-btn');
+  if (clearBtn) clearBtn.addEventListener('click', () => {
+    activeAuthor = null; activeIng = null;
+    renderAuthors(); renderIngList(); renderMain();
+  });
+
+  // Mobile summary
+  const parts = [];
+  if (activeAuthor) parts.push(activeAuthor.split(' ').pop());
+  if (activeIng)    parts.push(INDEX[activeIng]?.display || '');
+  document.getElementById('mob-summary').textContent = parts.length ? parts.join(' · ') : 'All favourites';
+
+  // When a fav is removed on this page, re-render everything
+  window.addEventListener('lv:favssynced', () => {
+    updateHeroCount(); renderAuthors(); renderIngList(); renderMain();
+  }, { once: true });
+}
+
+// ── SEARCH ───────────────────────────────────────────
+document.getElementById('ing-search').addEventListener('input', e => renderIngList(e.target.value));
+
+// ── MOBILE SHEET ─────────────────────────────────────
+let mobSheetOpen = false;
+function syncMob() {
+  document.getElementById('sidebar').classList.toggle('is-open', mobSheetOpen);
+  document.getElementById('mob-backdrop').classList.toggle('is-show', mobSheetOpen);
+}
+document.getElementById('mob-trigger').addEventListener('click',  () => { mobSheetOpen = !mobSheetOpen; syncMob(); });
+document.getElementById('mob-backdrop').addEventListener('click', () => { mobSheetOpen = false; syncMob(); });
+
+// ── INIT ─────────────────────────────────────────────
+updateHeroCount();
+renderAuthors();
+renderIngList();
+renderMain();
+
+// Re-render after cloud favs sync in
+window.addEventListener('lv:favssynced', e => {
+  updateHeroCount(); renderAuthors(); renderIngList(); renderMain();
+});
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="supabase.js"></script>
+<script src="auth.js"></script>
+<script>
+document.getElementById('nav-toggle').addEventListener('click', function() {
+  document.getElementById('nav-links').classList.toggle('is-open');
+});
+</script>
+</body>
+</html>

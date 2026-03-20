@@ -526,6 +526,18 @@
 
   <div class="divider"></div>
 
+
+  <!-- ══════════ MY FAVOURITES ══════════ -->
+  <section class="fav-home-section" id="fav-home-section" style="display:none;">
+    <div class="section-header">
+      <h2 class="section-title">My <em>Favourites</em></h2>
+      <a href="favourites.html" class="section-link">View all →</a>
+    </div>
+    <div class="fresh-grid" id="fav-home-grid"></div>
+  </section>
+
+  <div class="divider" id="fav-home-divider" style="display:none;"></div>
+
   <!-- ══════════ AUTHOR CAROUSEL ══════════ -->
   <section style="padding: 44px 40px 0;">
     <div class="section-header">
@@ -687,6 +699,44 @@ authorTrack.innerHTML = authors
         <div class="author-tile-count">${recs.length} recipes</div>
       </div></a>`;
   }).join('');
+
+// ── MY FAVOURITES (home page section) ────────────────
+function renderHomeFavs(favIds) {
+  const section  = document.getElementById('fav-home-section');
+  const divider  = document.getElementById('fav-home-divider');
+  const grid     = document.getElementById('fav-home-grid');
+  if (!favIds || favIds.size === 0) {
+    section.style.display = 'none';
+    divider.style.display = 'none';
+    return;
+  }
+  const favRecs = [...favIds]
+    .map(id => RECIPES.find(r => r.id === id))
+    .filter(Boolean);
+  if (!favRecs.length) {
+    section.style.display = 'none';
+    divider.style.display = 'none';
+    return;
+  }
+  grid.innerHTML = favRecs.slice(0, 8).map(r => {
+    const m = CAT_META[r.category] || { icon:'🍽️' };
+    return `<a href="recipe.html?id=${r.id}" class="fresh-card">
+      <div class="fresh-card-cat">${m.icon} ${escHtml(r.category)}</div>
+      <div class="fresh-card-title">${escHtml(r.title)}</div>
+      <div class="fresh-card-meta">⏱ ${escHtml(r.time)} · 👤 ${escHtml(r.serves)}</div>
+      <div class="fresh-card-author">by ${escHtml(r.author)}</div>
+    </a>`;
+  }).join('');
+  section.style.display = '';
+  divider.style.display = '';
+}
+
+// Initial render from localStorage
+renderHomeFavs(loadFavs());
+
+// Re-render when auth syncs cloud favs
+window.addEventListener('lv:favssynced', e => renderHomeFavs(e.detail.favIds));
+
 initCarousel('a-prev', 'a-next', 'author-track', 210 + 16);
 
 // ── CATEGORY CAROUSEL ─────────────────────────────────
@@ -826,10 +876,10 @@ function initCarousel(prevId, nextId, trackId, itemW) {
 }
 
 </script>
+
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 <script src="supabase.js"></script>
 <script src="auth.js"></script>
-
 <script>
 document.getElementById('nav-toggle').addEventListener('click', function() {
   document.getElementById('nav-links').classList.toggle('is-open');

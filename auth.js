@@ -96,10 +96,10 @@
           <div class="auth-avatar-lg" id="auth-avatar-lg"></div>
           <div class="auth-user-name" id="auth-user-name" style="display:none;"></div>
           <div class="auth-user-email" id="auth-user-email"></div>
-          <div class="auth-fav-summary">
+          <a href="favourites.html" class="auth-fav-summary" id="auth-fav-link">
             <span class="auth-fav-heart">❤️</span>
             <span id="auth-fav-count">0</span> recipes saved to favourites
-          </div>
+          </a>
           <button class="auth-signout" id="auth-signout">Sign Out</button>
         </div>
       </div>`;

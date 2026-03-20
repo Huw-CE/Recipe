@@ -946,12 +946,21 @@ footer::after { content: ''; position: absolute; bottom: -60px; left: -60px; wid
   margin-bottom: 18px;
 }
 .auth-fav-summary {
+  display: block;
   text-align: center;
+  text-decoration: none;
   background: rgba(192,90,44,0.07);
   border: 1px solid rgba(192,90,44,0.15);
   border-radius: 10px; padding: 13px 16px;
   font-size: 14px; color: var(--brown);
   margin-bottom: 22px;
+  transition: background 0.18s, border-color 0.18s;
+  cursor: pointer;
+}
+.auth-fav-summary:hover {
+  background: rgba(192,90,44,0.13);
+  border-color: rgba(192,90,44,0.35);
+  color: var(--rust);
 }
 .auth-fav-heart { margin-right: 4px; }
 .auth-signout {
