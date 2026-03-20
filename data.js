@@ -5390,6 +5390,7 @@ const ALL_INGREDIENTS = Object.keys(INDEX).sort();
 //  AUTHOR METADATA
 // ══════════════════════════════════════════════════════
 const AUTHOR_META = {
+  "Danielle Alvarez":   { initials:"DA", color:"#8B5E3C", bg:"rgba(139,94,60,0.12)",  desc:"Sydney-based chef and restaurateur whose cooking draws on California and Mediterranean influences. Always Add Lemon is a love letter to bright, generous, seasonal food." },
   "Jamie Oliver":       { initials:"JO", color:"#C05A2C", bg:"rgba(192,90,44,0.12)",  desc:"Quick, fresh and accessible recipes stripped back to their essentials. Jamie's 5 Ingredients collection proves great cooking doesn't need to be complicated." },
   "Donna Hay":          { initials:"DH", color:"#7A8C6E", bg:"rgba(122,140,110,0.12)", desc:"Elegant, beautifully balanced recipes from Australia's queen of accessible food styling. Donna's Balanced collection focuses on wholesome, fuss-free everyday cooking." },
   "Emelia Jackson":     { initials:"EJ", color:"#D4A847", bg:"rgba(212,168,71,0.12)",  desc:"Joyful baking from MasterChef Australia winner Emelia Jackson. Her recipes celebrate the pleasure of making something truly wonderful from scratch." },
