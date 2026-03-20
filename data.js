@@ -4693,6 +4693,221 @@ Meanwhile, heat the remaining prunes and red wine marinade in a saucepan over lo
 When cooked, remove the duck from the oven and cover with foil. Rest for about 10 minutes while the torta finishes cooking.
 
 Remove the string from the duck and slice into portions. Serve with the potato and zucchini torta, the remaining prunes and the warm marinade as a sauce.`
+  },
+  {
+    id: 155,
+    title: "Mom's Flan with Poached Cherries",
+    author: "Danielle Alvarez",
+    book: "Always Add Lemon",
+    serves: "8-10",
+    time: "1 hr 20 mins + overnight",
+    category: "Dessert",
+    ingredients: [
+      "150 g (5½ oz) caster (superfine) sugar",
+      "1×375 ml (12½ fl oz/1½ cups) tin evaporated milk",
+      "1×355 ml (12 fl oz) tin sweetened condensed milk",
+      "120 ml (4 fl oz) full-cream (whole) milk",
+      "2 eggs, plus 5 egg yolks",
+      "2 teaspoons vanilla extract",
+      "Poached cherries:",
+      "100 g (3½ oz) caster (superfine) sugar",
+      "2 strips lemon peel",
+      "1 vanilla bean, split",
+      "400 g (14 oz) sour or sweet fresh cherries (if using sweet cherries, add the juice of 1 lemon to the poaching liquid)"
+    ],
+    method: `Preheat the oven to 150°C (300°F) and boil a full kettle of water.
+
+Melt the sugar in a non-stick frying pan over a medium heat until it turns a dark amber colour. Use a wooden spoon to mix it once it starts caramelising to ensure that it all melts evenly. Immediately pour the caramel into the base of a non-stick loaf (bar) tin. Whisk together the remaining ingredients and a pinch of salt in a bowl, then pour the custard through a fine-mesh sieve directly onto the caramel. Cover the tin with aluminium foil and place it inside a larger baking dish. Place the dish in the oven, then pour in enough boiling water to come halfway up the side of the loaf tin. Bake for 1 hour and 20 minutes. At this point, check the texture: it should still be quite wobbly, but not liquid. If it is still liquid in the centre, continue cooking for another 15–20 minutes. Remove from the oven and allow to cool in the water bath. Once cooled, refrigerate, still covered, overnight.
+
+To make the poached cherries, combine the sugar, lemon peel, vanilla bean, 200 ml (7 fl oz) water and a pinch of salt in a saucepan and bring to a simmer on the stove. Pit your cherries using a cherry pitter, or push them out using a metal straw. Add the cherries to the pot and simmer until they are soft but not bursting, about 5 minutes. Set aside until ready to serve.
+
+To unmould, cut around the sides of the custard and invert onto a flat plate. Cut slices and serve with or without the poached cherries.`
+  },
+  {
+    id: 156,
+    title: "Chocolate Torte with Baked Plums",
+    author: "Danielle Alvarez",
+    book: "Always Add Lemon",
+    serves: "8-10",
+    time: "1 hr",
+    category: "Dessert",
+    ingredients: [
+      "225 g (8 oz) 70 per cent or higher dark chocolate",
+      "220 g (8 oz) butter, plus extra for greasing",
+      "1 teaspoon vanilla extract",
+      "8 eggs, separated",
+      "200 g (7 oz) caster (superfine) sugar",
+      "300 ml (10 fl oz) cream, lightly whipped, to serve",
+      "Plums:",
+      "1 kg (2 lb 3 oz) juicy, ripe plums, halved and stones removed",
+      "30 g (1 oz) butter, melted",
+      "2 tablespoons caster (superfine) sugar"
+    ],
+    method: `Grease and line a 28 cm (11 in) round cake tin.
+
+Combine the chocolate and butter in a heatproof bowl set over a saucepan of simmering water and melt, then set aside and allow to cool slightly. Once cooled, mix in the vanilla.
+
+In a separate bowl, whisk the egg yolks and half the sugar until lightened and beginning to form ribbons.
+
+In another bowl, whisk the egg whites with a pinch of salt until they become foamy, then gradually add the remaining sugar, little by little, while continuing to whisk. This is done easily in a freestanding electric mixer fitted with the whisk attachment.
+
+Preheat the oven to 170°C (340°F).
+
+Fold the whipped egg yolks into the melted chocolate, then fold in the whites in three stages. Stop folding when there are no more visible white streaks. Pour the mixture into your tin and bake for 40–50 minutes, or until the middle is no longer wobbly when tested with a skewer. Remove from the oven and allow to cool. Increase the oven temperature to 190°C (375°F).
+
+To prepare the plums, place them in a baking dish lined with baking paper. Pour the melted butter over the top, then sprinkle with the sugar. Bake for 15–20 minutes, then remove from the oven and allow to cool slightly.
+
+Serve slices of torte with a bit of lightly whipped cream and warm roasted plums.`
+  },
+  {
+    id: 157,
+    title: "Custard Apple and Kaffir Lime Ice Cream",
+    author: "Danielle Alvarez",
+    book: "Always Add Lemon",
+    serves: "6-8",
+    time: "30 mins + freezing",
+    category: "Dessert",
+    ingredients: [
+      "4 ripe custard apples",
+      "500 ml (17 fl oz/2 cups) cream",
+      "150 g (5½ oz) caster (superfine) sugar",
+      "4 kaffir lime leaves, crushed in a mortar and pestle"
+    ],
+    method: `Peel your custard apples using a small paring knife, then place the apple pulp, seeds and all, in a stainless-steel or other heatproof bowl and cover super tightly with plastic wrap. Make a rope of plastic wrap and tie it around the edge of the bowl to ensure no steam will escape.
+
+Place the bowl over a saucepan of simmering water, like a bain-marie. Ensure the bowl fits snugly into the saucepan and doesn't overhang the sides of the pan too much. Steam for 20 minutes, then push the pulp through a fine-mesh sieve. Discard the remaining pulp and seeds. Mix in the cream, sugar and crushed kaffir leaves and whisk to dissolve the sugar. Add a few pinches of salt at this stage. Chill for several hours before straining once more through a fine-mesh sieve, then freeze according to your ice-cream maker's instructions.`
+  },
+  {
+    id: 158,
+    title: "Almond and Cherry Custard Ice Cream",
+    author: "Danielle Alvarez",
+    book: "Always Add Lemon",
+    serves: "8",
+    time: "30 mins + freezing",
+    category: "Dessert",
+    ingredients: [
+      "420 ml (14 fl oz) full-cream (whole) milk",
+      "500 ml (17 fl oz/2 cups) cream",
+      "220 g (8 oz) caster (superfine) sugar",
+      "4 large egg yolks",
+      "1 teaspoon vanilla extract",
+      "1 teaspoon almond extract",
+      "2 tablespoons amaretto or kirsch",
+      "65 g (2¼ oz) toasted slivered almonds",
+      "400 g (14 oz) fresh pitted or frozen sour cherries"
+    ],
+    method: `Combine the milk, half the cream, the sugar and a pinch of salt in a saucepan over a medium–low heat. Warm until scalded and small bubbles appear on the edge of the pan.
+
+To a bowl, add the remaining cream. Set a fine-mesh sieve on top of the bowl, then set aside.
+
+Place the egg yolks in a mixing bowl and whisk until smooth. When your milk mixture has scalded, begin ladling it into the eggs while still hot, whisking with the opposite hand. Pour the whole mixture back into the pan and cook over a low heat, stirring continuously with a rubber spatula and making sure to scrape the bottom and side of the pan. When the mixture is visibly thickened and coats the back of a spoon (just before it begins to simmer and curdle the eggs), pour it through the sieve into the bowl with the cream to stop the cooking process. Mix to combine, then add the vanilla, almond extract and alcohol. Refrigerate until cold, then freeze according to your ice-cream maker's instructions. Add the nuts and cherries to the ice cream about 5 minutes before it has finished churning in the machine.`
+  },
+  {
+    id: 159,
+    title: "Bacon and Chicken Liver Parfait",
+    author: "Danielle Alvarez",
+    book: "Always Add Lemon",
+    serves: "8-10",
+    time: "Overnight + 2 hrs",
+    category: "Pork",
+    ingredients: [
+      "Reduction:",
+      "60 g (2 oz) shallot, peeled and sliced",
+      "½ tablespoon olive oil",
+      "1 bay leaf",
+      "60 g (2 oz) dry-cured smoked bacon, diced",
+      "150 ml (5 fl oz) Madeira",
+      "pinch of ground allspice",
+      "Parfait:",
+      "500 g (1 lb 2 oz) chicken livers, at room temperature",
+      "3 eggs, at room temperature",
+      "7 g (¼ oz) nitrate salt for cooked goods",
+      "3 g (⅛ oz) salt",
+      "2 g (⅛ oz) caster (superfine) sugar",
+      "pinch of freshly ground white pepper",
+      "pinch of ground allspice",
+      "360 g (12½ oz) clarified, warm unsalted butter or ghee",
+      "To finish:",
+      "50 ml (1¾ fl oz) clarified butter or ghee"
+    ],
+    method: `Make the reduction well before making the parfait so it has time to chill. Sweat the shallot over a low heat in the oil with the bay leaf to bring out all the sweetness. Cover with baking paper or a lid, slightly ajar, and allow to sweat gently until lightly brown in colour. Add the bacon and increase the heat to medium. Let everything become golden but not dark brown or burnt. You may need to add a splash of water to prevent it catching.
+
+Add the Madeira and reduce by two-thirds. Season with a pinch of pepper, allspice and salt. Remove the bay leaf and discard, then blend the mixture to a paste in a high-speed blender.
+
+Pass through a fine-mesh sieve by pressing on the paste with a ladle. You will end up with approximately 75–100 ml (2½–3½ fl oz) liquid. Allow to cool, then set aside. This can be made a day or two in advance and stored in the fridge.
+
+Before making the parfait, make sure all your ingredients, including the reduction, are slightly warm or at room temperature. The idea is to keep everything at the same temperature when mixing so as not to break the emulsion of the butter, eggs and livers.
+
+Clean the livers very well of any sinew and weigh them. You need to end up with 400 g (14 oz) once cleaned. Blend the livers with all the remaining ingredients except the butter until smooth, then slowly add the warm butter with the machine running on low speed. Finally, add the warmed reduction and blend. Pass through a fine-mesh sieve into a bowl. Pour this mixture into a 30×11 cm (12×4½ in) terrine mould and cover tightly with aluminium foil.
+
+Preheat the oven to 150°C (300°F).
+
+Place the terrine in a deep roasting tin and pour enough water into the roasting tin to come halfway up the side of the terrine. Bake until the internal temperature of the parfait reaches 58°C (136°F) on a cooking thermometer. Remove it from the oven and water bath and leave to cool completely, then refrigerate overnight.
+
+The following day, remove the parfait from the refrigerator and use a spoon to scrape the grey top layer away. Try to smooth the top out as much as possible. Pour the clarified butter over the top to completely cover and seal it, then refrigerate again to firm up. To serve, scoop out spoonfuls and serve with a drizzle of aged balsamic vinegar and grilled sourdough or crostini, or a sharp and sweet fruit chutney.`
+  },
+  {
+    id: 160,
+    title: "Chicken al Mattone with White Bean Purée, Lemon, Brown Butter and Capers",
+    author: "Danielle Alvarez",
+    book: "Always Add Lemon",
+    serves: "2",
+    time: "30 mins",
+    category: "Poultry",
+    ingredients: [
+      "2 boneless, skin-on chicken legs",
+      "3 tablespoons clarified butter",
+      "40 g (1½ oz) butter",
+      "1½ tablespoons salt-packed capers, rinsed",
+      "1 small lemon or ½ a large one, peeled, segmented and diced",
+      "20 g (¾ oz) chopped flat-leaf (Italian) parsley",
+      "White bean purée:",
+      "1 garlic bulb",
+      "2 tablespoons olive oil",
+      "400 g (14 oz) freshly cooked cannellini or borlotti beans (cooking liquid reserved)"
+    ],
+    method: `To achieve crispy skin, you need to dry out the skin of the chicken. Refrigerate uncovered for one or two nights. If you don't have time for this, dry out the skin as best you can with paper towel. On the day you want to cook the chicken, remove it from the fridge, season with salt and leave it to come to room temperature.
+
+Preheat the oven to 180°C (350°F).
+
+To make the white bean purée, start by cutting the top quarter off the garlic bulb. Place it on a piece of aluminium foil and pour the oil on top with a pinch of salt. Wrap the garlic in the foil and bake for 30–40 minutes until it is soft and golden. Remove from the oven, unwrap and allow to cool, being careful to reserve all the oil it was cooked in. Put the beans in a blender and blitz to a purée with some of their cooking liquid. Squeeze the soft garlic out of its skin and into the blender, along with the reserved garlic oil. Blend until smooth, then check for seasoning. Add a bit more liquid or water as needed to achieve a smooth but not runny consistency. Scrape it into a small saucepan, ready to warm up before serving.
+
+Heat a wide cast-iron pan over a high heat. When it is very hot, add the clarified butter and place one piece of chicken, skin side down, in the pan, then reduce the heat to medium. You will need to cook the chicken one piece at a time to ensure crispiness. Place a small piece of baking paper or aluminium foil on top of the chicken and use another heavy pan to weigh it down. It will take 6–8 minutes to brown the skin. Start checking it after 5 minutes. When brown and crispy, remove the chicken from the pan and repeat the process with the other piece. To finish cooking, place both pieces of chicken back in the pan, flesh side down, and cook for another 3–4 minutes until just cooked through. Remove the chicken from the pan and allow to rest. Discard the remaining oil, then add 30 ml (1 fl oz) water to the pan and deglaze, scraping all the bits from the bottom. Use this as a pan sauce. Set aside.
+
+Clean the pan and set over a medium heat. Brown the butter until golden, fragrant and foamy. Immediately throw in the capers and sizzle in the butter. Add the lemon pieces and parsley.
+
+To serve, place a bit of the warmed purée on the base of each plate and top with the chicken. Spoon some of the pan sauce on top and, finally, spoon over the butter caper sauce. Serve immediately.`
+  },
+  {
+    id: 161,
+    title: "Whole Roasted Pork Rack with Caramelised Apples and Mustard",
+    author: "Danielle Alvarez",
+    book: "Always Add Lemon",
+    serves: "4-6",
+    time: "1 hr + overnight",
+    category: "Pork",
+    ingredients: [
+      "1.25 kg (2 lb 12 oz) pork rack, bone in, skin on",
+      "8 g (¼ oz) sage leaves",
+      "10 g (¼ oz) salt",
+      "5–6 sweet apples, cored and quartered",
+      "1 teaspoon dijon mustard",
+      "1 teaspoon wholegrain mustard",
+      "2 tablespoons crème fraîche"
+    ],
+    method: `To prepare the pork rack for roasting, score the skin in thin narrow lines from top to bottom. You want to cut through the fat, but not into the flesh. This will allow the fat to melt out and the skin to blister. If your kitchen knife isn't super sharp, a small serrated knife makes this job easy.
+
+Next, make your sage salt by crushing the leaves and salt together in a mortar and pestle until you get something that is almost paste-like in consistency. Rub the sage salt around the flesh of the pork, but not the skin. Crack black pepper on the meat as well, then sprinkle plain sea salt on the skin and refrigerate, uncovered, overnight.
+
+The next day, remove your pork from the fridge and allow it to come to room temperature.
+
+Preheat the oven to 220°C (430°F).
+
+Place the pork, skin side up, on a tray lined with baking paper. Roast for about 20 minutes, then add the apples to the tray and turn to coat them in a bit of the rendered pork fat. Roast for another 30 minutes, or until the internal temperature at the thickest part of the meat reads between 58–65°C (136–149°F). At this stage, place your roast under the grill (broiler) for a minute or two, but do not walk away from it. This last little blast of heat will make any last bit of skin blister and puff into crackling, but it can burn very easily. Remove it from the oven and place on a chopping board. Let it rest for at least 15 minutes while you finish the sauce.
+
+Remove the apples from the roasting tray and pour off the juices and fat into a small saucepan. Set over a medium heat and add the mustards and crème fraîche. Bring to a simmer, then check for seasoning and set aside.
+
+Cut the pork rack in between the bones into chops. Serve one warm chop per person with a few wedges of apple. Finally, spoon a generous tablespoon of warm sauce on top of each chop and serve straight away. A little sprinkle of salt on top of the sliced meat is also a good idea.`
   }
 ];
 
@@ -5194,21 +5409,21 @@ const AUTHOR_META = {
 const CAT_META = {
   "Dessert":            { icon:"🍮", bg:"rgba(192,90,44,0.08)",   grad:"linear-gradient(135deg,#C05A2C,#D4A847)", img:"images/categories/dessert.webp" },
   "Poultry":            { icon:"🍗", bg:"rgba(212,168,71,0.09)",  grad:"linear-gradient(135deg,#D4A847,#7A8C6E)", img:"images/categories/poultry.webp" },
-  "Vegetarian":         { icon:"🥦", bg:"rgba(122,140,110,0.09)", grad:"linear-gradient(135deg,#7A8C6E,#2C8A5A)", img:"images/categories/vegetarian.webp" },
-  "Seafood":            { icon:"🦐", bg:"rgba(44,107,138,0.09)",  grad:"linear-gradient(135deg,#2C6B8A,#7A8C6E)", img:"images/categories/seafood.webp" },
+  "Vegetarian":         { icon:"🥦", bg:"rgba(122,140,110,0.09)", grad:"linear-gradient(135deg,#7A8C6E,#2C8A5A)", img:"images/categories/vegetarian.png" },
+  "Seafood":            { icon:"🦐", bg:"rgba(44,107,138,0.09)",  grad:"linear-gradient(135deg,#2C6B8A,#7A8C6E)", img:"images/categories/seafood.png" },
   "Salads":             { icon:"🥗", bg:"rgba(122,140,110,0.09)", grad:"linear-gradient(135deg,#7A8C6E,#D4A847)", img:"images/categories/salads.webp" },
   "Baking":             { icon:"🎂", bg:"rgba(212,168,71,0.09)",  grad:"linear-gradient(135deg,#D4A847,#C05A2C)", img:"images/categories/baking.webp" },
   "Breakfast":          { icon:"🍳", bg:"rgba(192,90,44,0.08)",   grad:"linear-gradient(135deg,#C05A2C,#D4A847)", img:"images/categories/breakfast.webp" },
-  "Beef":               { icon:"🥩", bg:"rgba(138,44,44,0.08)",   grad:"linear-gradient(135deg,#8A2C2C,#C05A2C)", img:"images/categories/beef.webp" },
-  "Pork":               { icon:"🥓", bg:"rgba(192,90,44,0.08)",   grad:"linear-gradient(135deg,#C05A2C,#8A2C2C)", img:"images/categories/pork.webp" },
-  "Snacks":             { icon:"🧆", bg:"rgba(212,168,71,0.08)",  grad:"linear-gradient(135deg,#D4A847,#7A8C6E)", img:"images/categories/snacks.webp" },
+  "Beef":               { icon:"🥩", bg:"rgba(138,44,44,0.08)",   grad:"linear-gradient(135deg,#8A2C2C,#C05A2C)", img:"images/categories/beef.png" },
+  "Pork":               { icon:"🥓", bg:"rgba(192,90,44,0.08)",   grad:"linear-gradient(135deg,#C05A2C,#8A2C2C)", img:"images/categories/pork.png" },
+  "Snacks":             { icon:"🧆", bg:"rgba(212,168,71,0.08)",  grad:"linear-gradient(135deg,#D4A847,#7A8C6E)", img:"images/categories/snacks.png" },
   "Lamb":               { icon:"🫕", bg:"rgba(138,92,44,0.08)",   grad:"linear-gradient(135deg,#8A5C2C,#C05A2C)", img:"images/categories/lamb.webp" },
-  "Pasta":              { icon:"🍝", bg:"rgba(192,136,44,0.09)",  grad:"linear-gradient(135deg,#C0882C,#C05A2C)", img:"images/categories/pasta.webp" },
-  "Pickles & Chutneys": { icon:"🫙", bg:"rgba(122,140,110,0.09)", grad:"linear-gradient(135deg,#7A8C6E,#D4A847)", img:"images/categories/pickles.webp" },
-  "Soup & Noodles":     { icon:"🍜", bg:"rgba(44,107,138,0.09)",  grad:"linear-gradient(135deg,#2C6B8A,#7A8C6E)", img:"images/categories/soup-and-noodles.webp" },
+  "Pasta":              { icon:"🍝", bg:"rgba(192,136,44,0.09)",  grad:"linear-gradient(135deg,#C0882C,#C05A2C)", img:"images/categories/pasta.png" },
+  "Pickles & Chutneys": { icon:"🫙", bg:"rgba(122,140,110,0.09)", grad:"linear-gradient(135deg,#7A8C6E,#D4A847)", img:"images/categories/pickles.png" },
+  "Soup & Noodles":     { icon:"🍜", bg:"rgba(44,107,138,0.09)",  grad:"linear-gradient(135deg,#2C6B8A,#7A8C6E)", img:"images/categories/soup-and-noodles.png" },
   "Dumplings":          { icon:"🥟", bg:"rgba(192,90,44,0.08)",   grad:"linear-gradient(135deg,#C05A2C,#D4A847)", img:"images/categories/dumplings.webp" },
-  "Basics":             { icon:"🧂", bg:"rgba(107,76,53,0.08)",   grad:"linear-gradient(135deg,#6B4C35,#9C8B7A)", img:"images/categories/basics.webp" },
-  "Risotto":            { icon:"🍚", bg:"rgba(192,136,44,0.09)",  grad:"linear-gradient(135deg,#C0882C,#D4A847)", img:"images/categories/risotto.webp" },
+  "Basics":             { icon:"🧂", bg:"rgba(107,76,53,0.08)",   grad:"linear-gradient(135deg,#6B4C35,#9C8B7A)", img:"images/categories/basics.png" },
+  "Risotto":            { icon:"🍚", bg:"rgba(192,136,44,0.09)",  grad:"linear-gradient(135deg,#C0882C,#D4A847)", img:"images/categories/risotto.png" },
   "Game":               { icon:"🦌", bg:"rgba(107,76,53,0.08)",   grad:"linear-gradient(135deg,#6B4C35,#8A2C2C)", img:"images/categories/game.webp" }
 };
 
